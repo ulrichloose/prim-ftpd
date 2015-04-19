@@ -152,7 +152,10 @@ public abstract class AndroidFile<T> {
 		if (filesArray != null) {
 			List<T> files = new ArrayList<T>(filesArray.length);
 			for (File file : filesArray) {
-				files.add(createFile(file));
+				// happens for '.android_secure' since android 5
+				//if (file.canRead()) {
+					files.add(createFile(file));
+				//}
 			}
 			return files;
 		}

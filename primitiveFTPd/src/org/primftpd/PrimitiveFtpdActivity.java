@@ -1,15 +1,19 @@
 package org.primftpd;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.security.PublicKey;
 import java.security.interfaces.RSAPublicKey;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ftpserver.util.IoUtils;
 import org.primftpd.prefs.FtpPrefsActivity;
@@ -38,11 +42,14 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.content.UriPermission;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -131,7 +138,10 @@ public class PrimitiveFtpdActivity extends Activity {
 
         setContentView(R.layout.main);
 
-    	// calc keys fingerprints
+        // static table
+        createDirectoriesTable();
+
+        // calc keys fingerprints
         calcPubkeyFingerprints();
     	createFingerprintTable();
 
@@ -481,6 +491,61 @@ public class PrimitiveFtpdActivity extends Activity {
     		table,
     		getText(R.string.prefTitleUser),
     		prefsBean.getUserName());
+    }
+
+    protected void createDirectoriesTable() {
+    	TableLayout table = (TableLayout)findViewById(R.id.directoriesTable);
+
+        // clear old entries
+    	table.removeAllViews();
+
+    	// TODO directories table, document provider api, saf
+    	createTableRow(
+    		table,
+    		getText(R.string.externalStorageDirs),
+    		getText(R.string.hasPermission));
+
+    	// collect persisted permissions to display them
+    	Map<Uri, UriPermission> uriToPerm = new HashMap<Uri, UriPermission>();
+		List<UriPermission> uriPerms = getContentResolver().getPersistedUriPermissions();
+		for (UriPermission uriPerm : uriPerms) {
+			uriToPerm.put(uriPerm.getUri(), uriPerm);
+		}
+
+    	//Context.getExternalFilesDirs();
+    	File[] externalFilesDirs = ContextCompat.getExternalFilesDirs(
+    		getApplicationContext(),
+    		null);
+    	for (File extFilesDir : externalFilesDirs) {
+    		Uri uri = Uri.fromFile(extFilesDir);
+    		//Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE, uri);
+//    		getContentResolver().takePersistableUriPermission(
+//    			uri,
+//	            Intent.FLAG_GRANT_READ_URI_PERMISSION |
+//	            Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+
+    		UriPermission uriPermission = uriToPerm.get(uri);
+
+    		createTableRow(
+	    		table,
+	    		extFilesDir.getAbsolutePath(),
+	    		uriPermission.isWritePermission()
+    				? getText(R.string.yes)
+    				: getText(R.string.no));
+    	}
+    }
+
+    protected File[] externalFilesDirsReflection(Context context) {
+    	Class<? extends Context> contextClass = context.getClass();
+    	try {
+			Method method = contextClass.getDeclaredMethod(
+				"getExternalFilesDirs",
+				String.class);
+			return (File[])method.invoke(context, new Object[]{null});
+		} catch (Exception e) {
+			logger.info("no getExternalFilesDirs()", e);
+		}
+    	return new File[]{};
     }
 
     protected void createFingerprintTable() {

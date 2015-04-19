@@ -15,7 +15,11 @@
     <string name="state">Status</string>
     <string name="serverStarted">Gestartet &#8230;</string>
     <string name="serverStopped">Gestoppt</string>
-    
+    <string name="externalStorageDirs">Verzeichnisse für Externen Speicher</string>
+    <string name="hasPermission">Berechtigung?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+
     <string name="startService">Server Starten</string>
     <string name="stopService">Server Stoppen</string>
     <string name="notificationTitle">FTP Server</string>

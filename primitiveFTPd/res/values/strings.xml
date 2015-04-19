@@ -15,6 +15,10 @@
     <string name="state">State</string>
     <string name="serverStarted">Running &#8230;</string>
     <string name="serverStopped">Stopped</string>
+    <string name="externalStorageDirs">External Storage Directories</string>
+    <string name="hasPermission">Permission?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
     
     <string name="startService">Start Server</string>
     <string name="stopService">Stop Server</string>
