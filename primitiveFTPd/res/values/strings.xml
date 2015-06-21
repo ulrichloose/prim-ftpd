@@ -15,7 +15,9 @@
     <string name="state">State</string>
     <string name="serverStarted">Running &#8230;</string>
     <string name="serverStopped">Stopped</string>
-    
+    <string name="externalStoragePath">Path to External Storage</string>
+    <string name="permission">Permission</string>
+
     <string name="startService">Start Server</string>
     <string name="stopService">Stop Server</string>
     <string name="notificationTitle">FTP Server</string>

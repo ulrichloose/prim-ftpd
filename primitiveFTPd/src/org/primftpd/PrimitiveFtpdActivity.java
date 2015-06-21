@@ -14,6 +14,7 @@ import java.util.List;
 import org.apache.ftpserver.util.IoUtils;
 import org.primftpd.prefs.FtpPrefsActivity;
 import org.primftpd.prefs.ServerToStart;
+import org.primftpd.saf.reflective.ExtStorageTableCreator;
 import org.primftpd.services.FtpServerService;
 import org.primftpd.services.SshServerService;
 import org.primftpd.util.KeyGenerator;
@@ -113,6 +114,8 @@ public class PrimitiveFtpdActivity extends Activity {
 
 	public static final String DIALOG_TAG = "dialogs";
 
+	public static final int ACTIVITY_RESULT_OPEN_DOC_TREE = 73;
+
 	protected Logger logger = LoggerFactory.getLogger(getClass());
 
 	private PrefsBean prefsBean;
@@ -121,6 +124,8 @@ public class PrimitiveFtpdActivity extends Activity {
 	private String fingerprintMd5 = " - ";
 	private String fingerprintSha1 = " - ";
 	private String fingerprintSha256 = " - ";
+
+	private ExtStorageTableCreator extStorageTabCreator = new ExtStorageTableCreator();
 
 	/** Called when the activity is first created. */
     @Override
@@ -138,6 +143,9 @@ public class PrimitiveFtpdActivity extends Activity {
     	// calc keys fingerprints
         calcPubkeyFingerprints();
     	createFingerprintTable();
+
+    	// ext storage table
+    	createExtStorageTable();
 
     	// prefs change
     	SharedPreferences prefs = getPrefs();
@@ -310,13 +318,17 @@ public class PrimitiveFtpdActivity extends Activity {
     }
 
     /**
-     * Creates a 2 column row in a table.
-     *
-     * @param table Table to add row to.
-     * @param label Text for left column.
-     * @param value Text for right column.
-     */
-    protected void createTableRow(
+	 * Creates a 2 column row in a table. It is public to be used by
+	 * {@link ExtStorageTableCreator}.
+	 *
+	 * @param table
+	 *            Table to add row to.
+	 * @param label
+	 *            Text for left column.
+	 * @param value
+	 *            Text for right column.
+	 */
+    public void createTableRow(
 		TableLayout table,
 		CharSequence label,
 		CharSequence value)
@@ -588,6 +600,29 @@ public class PrimitiveFtpdActivity extends Activity {
 			progressDiag.dismiss();
 			createFingerprintTable();
 		}
+    }
+
+    protected void createExtStorageTable() {
+    	TableLayout table = (TableLayout)findViewById(R.id.extStorageTable);
+
+        // clear old entries
+    	table.removeAllViews();
+
+    	extStorageTabCreator.createTable(this, table);
+    }
+
+    @Override
+    protected
+    		void
+    		onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+    	if (requestCode == ACTIVITY_RESULT_OPEN_DOC_TREE) {
+			extStorageTabCreator.onActivityResult(
+				this,
+				requestCode,
+				resultCode,
+				data);
+    	}
     }
 
     /**
