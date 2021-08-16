@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widgetLayout"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
+    android:layout_width="48dp"
     android:layout_height="match_parent"
-    android:layout_margin="8dip"
-    android:background="@drawable/widget_background_disabled">
+    android:layout_marginTop="4dp"
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/widgetIcon"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_play_white_48dp" />
+        android:src="@drawable/ic_play_white_48dp_x" />
 
     <TextView
         android:id="@+id/widgetText"
-        style="@android:style/TextAppearance.Small"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed"
         android:gravity="center_horizontal"
         android:text="@string/widgetTextStart"
-        android:textColor="@color/widgetTextColorEnabled">
-    </TextView>
+        android:textColor="@color/widgetTextColorEnabled"
+        android:textSize="13sp" />
 </LinearLayout>

@@ -95,8 +95,8 @@
     <string name="licence">Licence</string>
     <string name="reset">Reset</string>
 
-    <string name="widgetTextStart">start (s)ftpd</string>
-    <string name="widgetTextStop">stop (s)ftpd</string>
+    <string name="widgetTextStart">FTP on</string>
+    <string name="widgetTextStop">FTP off</string>
     <string name="isAnonymous">Anonymous Login: %1$b</string>
     <string name="passwordPresent">Password present: %1$b</string>
     <string name="pubKeyAuth">Public key auth: %1$b</string>

@@ -217,22 +217,18 @@ public class ServicesStartStopUtil {
         RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget);
 
         if (running) {
-            remoteViews.setInt(R.id.widgetLayout,
-                    "setBackgroundResource",
-                    R.drawable.widget_background_enabled);
+ 
             remoteViews.setImageViewResource(
                     R.id.widgetIcon,
-                    R.drawable.ic_stop_white_48dp);
+                    R.drawable.ic_stop_white_48dp_x);
             remoteViews.setTextViewText(
                     R.id.widgetText,
                     context.getText(R.string.widgetTextStop));
         } else {
-            remoteViews.setInt(R.id.widgetLayout,
-                    "setBackgroundResource",
-                    R.drawable.widget_background_disabled);
+
             remoteViews.setImageViewResource(
                     R.id.widgetIcon,
-                    R.drawable.ic_play_white_48dp);
+                    R.drawable.ic_play_white_48dp_x);
             remoteViews.setTextViewText(
                     R.id.widgetText,
                     context.getText(R.string.widgetTextStart));
