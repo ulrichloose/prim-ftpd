@@ -27,7 +27,6 @@
     <string name="toggleService">Iniciar/Parar o servidor</string>
     <string name="notificationTitle">Servidor de FTP</string>
 
-    <string name="haveToSetPassword">Primeiro tem que definir uma senha</string>
     <string name="haveToSetAuthMechanism">Primeiro tem que definir um modo de autenticação</string>
     <string name="serverRunning">O servidor FTP está em andamento</string>
     <string name="serverCouldNotBeStarted">O servidor não pôde ser iniciado! Mensagem de erro: </string>
@@ -80,12 +79,10 @@
     <string name="prefTitleFtpPassivePorts">Portas Passivas de FTP</string>
     <string name="prefSummaryFtpPassivePorts">Portas para conexão passiva FTP de dados. Pode ser uma única porta, uma lista ou um conjunto de portas. P.ex. 5678,5700-5710,5800,5900.</string>
     <string name="prefTitleIdleTimeout">Tempo de inatividade do servidor</string>
-    <string name="prefSummaryIdleTimeout">O servidor encerrará as conexões inativas após este tempo em segundos (apenas FTP)</string>
     <string name="prefSummaryIdleTimeoutV2">O servidor encerrará as conexões inativas após este tempo, em segundos. Ajuste para 0 para desativar.</string>
     <string name="prefTheme">Tema</string>
     <string name="prefSummaryTheme">A mudança do tema pode exigir o reinício do aplicativo.</string>
     <string name="prefTitleLogging">Log</string>
-    <string name="prefSummaryLogging">O log serve para análise de erros. Se o aplicativo não funcionar corretamente no seu dispositivo, você pode enviar um registro de logs para os desenvolvedores. Pode ser necessário reiniciar o aplicativo.</string>
     <string name="prefSummaryLoggingV2">O log serve para análise de erros. Se o aplicativo não funcionar corretamente no seu dispositivo, você pode enviar um registro de logs para os desenvolvedores. Pode ser necessário reiniciar o aplicativo. Os logs de texto são armazenados em %s.</string>
     <string name="prefAllowedIpsPattern">Padrão de IPs permitidos</string>
     <string name="prefSummaryAllowedIpsPattern">Padrão de Endereços IP permitidos. Apenas um Wildcard (*) pode ser usado, apenas como último caractere.</string>
@@ -112,13 +109,9 @@
     <string name="safExplain">O Android pedirá você para escolher uma pasta. Esta estará disponível através de servidor(es). De vez em quando, a permissão poderá ser revogada e você terá que selecionar ela novamente.</string>
     <string name="selectedSafUri">SAF URI selecionado:</string>
 
-    <string name="startServerAndExit">iniciar apenas o servidor</string>
-    <string name="startServerAndUi">comece com o servidor</string>
-
     <string name="downloadOrSaveUrlToFile">Baixar ou salvar o URL em arquivo de texto ?</string>
     <string name="download">Download</string>
     <string name="saveToTextFile">Salvar em arquivo de texto</string>
-    <string name="open">Abrir</string>
 
     <string name="filepickerCreateFolderError">Falha na criação da pasta</string>
     <string name="filepickerNewFolder">Nova pasta</string>
@@ -129,7 +122,6 @@
     <string name="filepickerName">Nome</string>
     <string name="filepickerFilename">Nome do arquivo</string>
     <string name="filepickerSelectSomethingFirst">Por favor, selecione algo primeiro</string>
-    <string name="filepickerNeedValidFilename">Por favor, digite ou selecione um nome de arquivo válido</string>
 
     <string name="quickShare">Compartilhamento rápido</string>
     <string name="quickShareServerStarted">O servidor foi iniciado compartilhando um único arquivo</string>
@@ -138,11 +130,6 @@
     <string name="quickShareInfoActivity">Executando em modo do QuickShare para o arquivo: %1s</string>
 
     <string name="clientActionsLabel">Registro de ação do cliente</string>
-    <string name="statsLabel">Stats</string>
-    <string name="statsTotalSent">Total enviado</string>
-    <string name="statsTotalReceived">Total recebido</string>
-    <string name="statsSentPerSec">Enviado por segundo</string>
-    <string name="statsReceivedPerSec">Recebido por segundo</string>
 
     <string-array name="prefWhichServerToStartNames">
         <item>FTP e SFTP</item>

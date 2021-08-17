@@ -27,7 +27,6 @@
     <string name="toggleService">Toggle Server start/stop</string>
     <string name="notificationTitle">FTP Server</string>
 
-    <string name="haveToSetPassword">You have to set a password first</string>
     <string name="haveToSetAuthMechanism">You have to set an authentication mechanism first</string>
     <string name="serverRunning">FTP Server is running</string>
     <string name="serverCouldNotBeStarted">Server could not be started! Error message: </string>
@@ -80,12 +79,10 @@
     <string name="prefTitleFtpPassivePorts">FTP Passive Ports</string>
     <string name="prefSummaryFtpPassivePorts">Ports for FTP passive data connection. May be a single port, a list or range of ports. E.g. 5678,5700-5710,5800,5900.</string>
     <string name="prefTitleIdleTimeout">Server Idle Timeout</string>
-    <string name="prefSummaryIdleTimeout">Server will terminate idle connections after this time in seconds (FTP only)</string>
     <string name="prefSummaryIdleTimeoutV2">Server will terminate idle connections after this time in seconds. Set to 0 to disable.</string>
     <string name="prefTheme">Theme</string>
     <string name="prefSummaryTheme">Changing Theme may require to restart the app.</string>
     <string name="prefTitleLogging">Log</string>
-    <string name="prefSummaryLogging">Log serves analyzing of errors. If the app does not work properly on your device you can send a log to developers. May require to restart the app.</string>
     <string name="prefSummaryLoggingV2">Log serves analyzing of errors. If the app does not work properly on your device you can send a log to developers. May require to restart the app. Text Logs are stored in %s.</string>
     <string name="prefAllowedIpsPattern">Allowed IPs pattern</string>
     <string name="prefSummaryAllowedIpsPattern">Pattern of allowed IP Addresses. Just one Wildcard (*) may be used, as last character only.</string>
@@ -112,13 +109,9 @@
     <string name="safExplain">Android will ask you to choose a directory. That will be available via server(s). From time to time permission might be revoked and you have to re-select.</string>
     <string name="selectedSafUri">Selected SAF URI:</string>
 
-    <string name="startServerAndExit">start server only</string>
-    <string name="startServerAndUi">start with server</string>
-
     <string name="downloadOrSaveUrlToFile">Download or save URL to text file ?</string>
     <string name="download">Download</string>
     <string name="saveToTextFile">Save to text file</string>
-    <string name="open">Open</string>
 
     <string name="filepickerCreateFolderError">Failed to create folder</string>
     <string name="filepickerNewFolder">New folder</string>
@@ -129,7 +122,6 @@
     <string name="filepickerName">Name</string>
     <string name="filepickerFilename">Filename</string>
     <string name="filepickerSelectSomethingFirst">Please select something first</string>
-    <string name="filepickerNeedValidFilename">Please enter or select a valid filename</string>
 
     <string name="quickShare">Quick Share</string>
     <string name="quickShareServerStarted">Server has been started sharing single file</string>
@@ -138,11 +130,6 @@
     <string name="quickShareInfoActivity">Running in QuickShare Mode for file: %1s</string>
 
     <string name="clientActionsLabel">Client Action Log</string>
-    <string name="statsLabel">Stats</string>
-    <string name="statsTotalSent">Total Sent</string>
-    <string name="statsTotalReceived">Total Received</string>
-    <string name="statsSentPerSec">Sent per second</string>
-    <string name="statsReceivedPerSec">Received per second</string>
 
     <string-array name="prefWhichServerToStartNames">
         <item>FTP and SFTP</item>

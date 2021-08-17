@@ -66,15 +66,4 @@
 		<item name="windowNoTitle">true</item>
 	</style>
 
-	<style name="FilepickerBaseTheme.Light" parent="Theme.AppCompat.Light.DialogWhenLarge">
-		<!-- You can override this in your sub theme -->
-		<item name="filepickerToolbarTheme">@style/ThemeOverlay.AppCompat.ActionBar</item>
-		<item name="filepickerSeparatorColor">@color/filepickerLightSeparatorColor</item>
-		<item name="filepickerSaveIconColor">?attr/colorAccent</item>
-		<item name="filepickerDirIconColor">?attr/colorAccent</item>
-
-		<!-- These are important. Handled by toolbar. -->
-		<item name="windowActionBar">false</item>
-		<item name="windowNoTitle">true</item>
-	</style>
 </resources>

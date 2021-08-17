@@ -26,7 +26,6 @@
     <string name="toggleService">Εναλλαγή έναρξης/διακοπής Εξυπηρετητή</string>
     <string name="notificationTitle">Εξυπηρετητής FTP</string>
 
-    <string name="haveToSetPassword">Πρέπει πρώτα να οριστεί ένας κωδικός</string>
     <string name="serverRunning">Ο εξυπηρετητής FTP είναι ενεργός</string>
     <string name="serverCouldNotBeStarted">Ο εξυπηρετητής δεν μπόρεσε να εκκινηθεί! Μήνυμα σφάλματος:</string>
     <string name="portInvalid_v2">Η τιμή της πόρτας δεν είναι έγκυρη. Πρέπει να είναι μεταξύ 1024 και 64000.</string>
@@ -65,12 +64,10 @@
     <string name="prefTitleFtpPassivePorts">Παθητικές Πόρτες FTP</string>
     <string name="prefSummaryFtpPassivePorts">Πόρτες για παθητική σύνδεση δεδομένων FTP. Μπορεί να είναι μία πόρτα ή μία λίστα από πόρτες. Π.χ. 5678,5700-5710,5800,5900.</string>
     <string name="prefTitleIdleTimeout">Χρονικό όριο Αδράνειας Εξυπηρετητή</string>
-    <string name="prefSummaryIdleTimeout">Ο διακομιστής θα τερματίσει τις αδρανείς συνδέσεις μετά από αυτό το χρονικό διάστημα σε δευτερόλεπτα (μόνο FTP)</string>
     <string name="prefSummaryIdleTimeoutV2">Ο διακομιστής θα τερματίσει τις αδρανείς συνδέσεις μετά από αυτό το χρονικό διάστημα σε δευτερόλεπτα. Ορίστε το 0 για απενεργοποίηση.</string>
     <string name="prefTheme">Θέμα</string>
     <string name="prefSummaryTheme">Η αλλαγή θέματος ίσως απαιτήσει την επανεκκίνηση της εφαρμογής.</string>
     <string name="prefTitleLogging">Αρχείο καταγραφής</string>
-    <string name="prefSummaryLogging">Το αρχείο καταγραφής εξυπηρετεί στην ανάλυση των σφαλμάτων. Εάν η εφαρμογή δεν λειτουργεί κανονικά στην συσκευή μπορεί να γίνει αποστολή του αρχείου στους προγραμματιστές. Ίσως να απαιτείται επανεκκίνηση της εφαρμογής.</string>
 
     <string name="licence">Άδεια χρήσης</string>
     <string name="reset">Επαναφορά</string>
@@ -89,9 +86,6 @@
     <string name="safExplainHeading">Πώς λειτουργεί το ΣΑΠ (SAF)</string>
     <string name="safExplain">Το λειτουργικό θα ρωτήσει να επιλέξετε φάκελο. Αυτός θα είναι διαθέσιμος μέσω του εξυπηρετητή. Κατά διαστήματα η άδεια χρήσης θα ανακαλείται και θα πρέπει να ξανά επιλέξετε τον φάκελο.</string>
     <string name="selectedSafUri">Επιλεγμένο SAF URI:</string>
-
-    <string name="startServerAndExit">εκκίνηση του εξυπηρετητή μόνο</string>
-    <string name="startServerAndUi">εκκίνηση με τον εξυπηρετητή</string>
 
     <string-array name="prefWhichServerToStartNames">
         <item>FTP και SFTP</item>

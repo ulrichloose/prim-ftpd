@@ -24,7 +24,6 @@
     <string name="stopService">Server stoppen</string>
     <string name="toggleService">Server zwischen Start/Stop umschalten</string>
     <string name="notificationTitle">FTP-Server</string>
-    <string name="haveToSetPassword">Sie müssen erst ein Passwort setzen</string>
     <string name="haveToSetAuthMechanism">Sie müssen erst einen Authentifizierungs-Mechanismus festlegen</string>
     <string name="serverRunning">FTP-Server läuft</string>
     <string name="serverCouldNotBeStarted">Server konnte nicht gestartet werden! Fehlermeldung: </string>
@@ -74,11 +73,9 @@
     <string name="prefTitleFtpPassivePorts">FTP Passive Ports</string>
     <string name="prefSummaryFtpPassivePorts">Ports für FTP Passive-Daten-Verbindung. Kann ein einzelner Port, eine Liste oder Bereich von Ports sein. Z.B. 5678,5700-5710,5800,5900.</string>
     <string name="prefTitleIdleTimeout">Server Idle-Timeout</string>
-    <string name="prefSummaryIdleTimeout">Server wird ungenutzte Verbindungen nach dieser Zeit in Sekunden beenden (nur FTP)</string>
     <string name="prefSummaryIdleTimeoutV2">Server wird ungenutzte Verbindungen nach dieser Zeit in Sekunden beenden. Auf 0 setzen um abzuschalten.</string>
     <string name="prefSummaryTheme">Das Theme zu ändern kann einen Neustart der App erfordern.</string>
     <string name="prefTitleLogging">Log</string>
-    <string name="prefSummaryLogging">Log dient der Analyse von Fehlern. Falls die App auf ihrem Gerät nicht richtig funktioniert können sie ein Log an die Entwickler senden. Es kann nötig sein die App neu zu starten.</string>
     <string name="prefSummaryLoggingV2">Log dient der Analyse von Fehlern. Falls die App auf ihrem Gerät nicht richtig funktioniert können sie ein Log an die Entwickler senden. Es kann nötig sein die App neu zu starten. Text Logs werden abgelegt in %s.</string>
     <string name="prefAllowedIpsPattern">Erlaubte IPs Pattern</string>
     <string name="prefSummaryAllowedIpsPattern">Pattern der erlaubten IP Adressen. Nur eine Wildcard (*) kann genutzt werden, nur als letztes Zeichen.</string>
@@ -99,13 +96,10 @@
     <string name="safExplainHeading">Wie SAF funktioniert</string>
     <string name="safExplain">Android wird sie darum bitten ein Verzeichnis auszuwählen. Dieses wird über die Server verfügbar gemacht. Von Zeit zu Zeit kann die Berechtigung zurückgezogen werden und das Verzeichnis muss erneut ausgewählt werden.</string>
     <string name="selectedSafUri">Ausgewählte SAF-URI:</string>
-    <string name="startServerAndExit">Starte nur Server</string>
-    <string name="startServerAndUi">Starte mit Server</string>
 
     <string name="downloadOrSaveUrlToFile">Download oder URL in Textdatei speichern ?</string>
     <string name="download">Download</string>
     <string name="saveToTextFile">In Textdatei speichern</string>
-    <string name="open">Öffnen</string>
 
     <string name="quickShare">Quick Share</string>
     <string name="quickShareServerStarted">Server wurde gestartet, stellt eine Datei bereit</string>
@@ -120,7 +114,6 @@
     <string name="filepickerName">Name</string>
     <string name="filepickerFilename">Dateiname</string>
     <string name="filepickerSelectSomethingFirst">Bitte erst etwas ausählen</string>
-    <string name="filepickerNeedValidFilename">Bitte gültigen Dateinamen eingeben oder auswählen</string>
     <string-array name="prefWhichServerToStartNames">
         <item>FTP und SFTP</item>
         <item>nur FTP</item>

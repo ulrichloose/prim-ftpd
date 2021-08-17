@@ -24,8 +24,7 @@
 	        android:layout_marginLeft="20dp" />
 
 	    <TextView
-	        android:id="@+id/licenceLabel"
-	        android:text="@string/licence"
+            android:text="@string/licence"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:textStyle="bold"
@@ -107,8 +106,7 @@
 			android:layout_marginLeft="20dp" />
 
 		<TextView
-			android:id="@+id/librariesLabel"
-			android:text="Libraries"
+            android:text="Libraries"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:textStyle="bold"

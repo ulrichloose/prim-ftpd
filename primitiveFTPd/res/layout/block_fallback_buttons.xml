@@ -2,7 +2,6 @@
 
     <!-- fallback buttons container (e.g. for leanback) -->
     <LinearLayout
-        android:id="@+id/fallbackButtonsContainer"
         android:visibility="visible"
         android:orientation="horizontal"
         android:layout_width="wrap_content"

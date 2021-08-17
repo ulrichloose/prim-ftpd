@@ -19,7 +19,6 @@
     <string name="generate">Згенерувати</string>
     <string name="generateKeysMessage">Згенерувати ключі?</string>
     <string name="generatingKeysMessage">Генеруємо ключі &#8230;</string>
-    <string name="haveToSetPassword">Спершу потрібно вказати пароль</string>
     <string name="ifacesError">Помилка:</string>
     <string name="ifacesLabel">Мережевий інтерфейс</string>
     <string name="isAnonymous">Анонімний вхід: %1$b</string>
@@ -49,7 +48,6 @@
     <string name="prefSummaryPortSecure">Порт FTP сервера (з шифруванням)</string>
     <string name="prefSummaryPort">Порт FTP сервера</string>
     <string name="prefSummaryPassword">Пароль FTP сервера</string>
-    <string name="prefSummaryLogging">Журнал допомагає аналізувати помилки. Якщо додаток працює некоректно на вашому пристрої, ви можете надіслати журнал розробникам.\nМоже потребувати перезапуску додатку.</string>
     <string name="prefSummaryFtpPassivePorts">Порти для пасивного з\'єднання даних FTP. Можна вказати один порт, перелік або діапазон портів. Наприклад, 5678,5700–5710,5800,5900.</string>
     <string name="prefSummaryUser">Ім\'я користувача FTP сервера</string>
     <string name="prefSummaryWakelock">Запобігає засинанню пристрою під час роботи сервера. Засинання може спричиняти скасування передач файлів.</string>

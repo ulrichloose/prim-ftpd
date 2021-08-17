@@ -137,7 +137,7 @@ public abstract class AbstractFilePickerActivity<T> extends AppCompatActivity
         i.putStringArrayListExtra(EXTRA_PATHS, paths);
 
         // Set as Clip Data for Jelly bean and above
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+        
             ClipData clip = null;
             for (Uri file : files) {
                 if (clip == null) {
@@ -146,7 +146,7 @@ public abstract class AbstractFilePickerActivity<T> extends AppCompatActivity
                 } else {
                     clip.addItem(new ClipData.Item(file));
                 }
-            }
+            
             i.setClipData(clip);
         }
 

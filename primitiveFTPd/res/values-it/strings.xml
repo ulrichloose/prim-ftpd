@@ -24,7 +24,6 @@
     <string name="toggleService">Attiva/Arresta Server</string>
     <string name="notificationTitle">Server FTP</string>
 
-    <string name="haveToSetPassword">Devi prima impostare una password</string>
     <string name="serverRunning">Server FTP attivo</string>
     <string name="serverCouldNotBeStarted">Il server non può essere avviato! Errore:</string>
     <string name="portInvalid_v2">Il valore della porta non é valido. Deve stare tra 1024 e 64000.</string>
@@ -34,7 +33,6 @@
     <string name="couldNotReadKeyAuthKey">Non é stato possibile leggere la chiave pubblica per l\'autenticazione. Controlla i logs.</string>
 
     <string name="prefs">Preferenze</string>
-    <string name="prefCategoryTitle">Preferenze del Server FTP</string>
     <string name="prefTitleUser">Nome Utente</string>
     <string name="prefSummaryUser">Nome utente del server FTP</string>
     <string name="prefTitlePassword">Password</string>
@@ -64,12 +62,10 @@
     <string name="prefTitleFtpPassivePorts">Porte FTP Passivo</string>
     <string name="prefSummaryFtpPassivePorts">Porte per la connessione FTP passiva. Può essere una singola porta, una lista o un intervallo di porte. Es. 5678,5700-5710,5800,5900.</string>
     <string name="prefTitleIdleTimeout">Timeout inattività Server</string>
-    <string name="prefSummaryIdleTimeout">Il server terminerà le connessioni inattive dopo questo tempo in secondi (solo FTP)</string>
     <string name="prefSummaryIdleTimeoutV2">Il server terminerà le connessioni inattive dopo questo tempo in secondi. Impostare a 0 per disabilitare.</string>
     <string name="prefTheme">Tema</string>
     <string name="prefSummaryTheme">La modifica del Tema richiede il riavvio dell\'app.</string>
     <string name="prefTitleLogging">Log</string>
-    <string name="prefSummaryLogging">Il log permette di analizzare gli errori. Se l\'app non funziona correttamente sul tuo device puoi inviare il log agli sviluppatori. Questa modifica richiede il riavvio dell\'app.</string>
 
     <string name="licence">Licenza</string>
     <string name="reset">Reimposta</string>
@@ -90,7 +86,4 @@
     <string name="safExplain">Android richiederà di scegliere una cartella. Questa sarà resa visibile al/ai server. Può capitare che il permesso venga revocato, e dovrai nuovamente selezionare la cartella.</string>
     <string name="selectedSafUri">URI SAF selezionato:</string>
 
-    <string name="startServerAndExit">avvia solo il server</string>
-    <string name="startServerAndUi">avvia server e interfaccia</string>
-
-    </resources>
+</resources>

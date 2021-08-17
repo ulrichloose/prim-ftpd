@@ -24,7 +24,6 @@
     <string name="stopService">Setop Server</string>
     <string name="toggleService">Mulai/Setop Server</string>
     <string name="notificationTitle">Server FTP</string>
-    <string name="haveToSetPassword">Anda harus menyiapkan sandi terlebih dahulu</string>
     <string name="haveToSetAuthMechanism">Anda harus menyiapkan mekanisme otentikasi terlebih dahulu</string>
     <string name="serverRunning">Server FTP sedang berjalan</string>
     <string name="serverCouldNotBeStarted">Server tidak bisa dimulai! Pesan galat: </string>
@@ -76,11 +75,9 @@
     <string name="prefTitleFtpPassivePorts">Porta FTP Pasif</string>
     <string name="prefSummaryFtpPassivePorts">Porta untuk koneksi data FTP Pasif. Boleh porta tunggal, beberapa atau rentang porta. Mis. 5678,5700-5710,5800,5900.</string>
     <string name="prefTitleIdleTimeout">Batas Waktu Menganggur Server</string>
-    <string name="prefSummaryIdleTimeout">Server akan menghentikan koneksi yang tidak aktif setelah batas waktu ini dalam hitungan detik (hanya FTP).</string>
     <string name="prefTheme">Tema</string>
     <string name="prefSummaryTheme">Mengubah Tema mungkin membutuhkan aplikasi untuk dimulai ulang.</string>
     <string name="prefTitleLogging">Log</string>
-    <string name="prefSummaryLogging">Log disediakan untuk analisa galat. Jika apl tidak bekerja sebagaimana mestinya pada perangkat anda, anda bisa mengirim log ke pengembang. Mungkin membutuhkan apl untuk dimulai ulang.</string>
     <string name="prefSummaryLoggingV2">Log disediakan untuk analisa galat. Jika apl tidak bekerja sebagaimana mestinya pada perangkat anda, anda bisa mengirim log ke pengembang. Mungkin membutuhkan apl untuk dimulai ulang. Text Logs are stored in %s.</string>
     <string name="prefAllowedIpsPattern">&gt;Pola IP yang diizinkan</string>
     <string name="prefSummaryAllowedIpsPattern">Pola alamat IP yang diizinkan. Hanya satu Wildcard (*) yang boleh digunakan, hanya sebagai karakter terakhir.</string>
@@ -101,8 +98,6 @@
     <string name="safExplainHeading">Bagaimana SAF bekerja</string>
     <string name="safExplain">Android akan bertanya pada anda untuk memilih direktori. Direktori tersebut akan tersedia untuk diakses via server. Seiring berjalannya waktu izin mungkin akan dicabut dan anda harus memilihnya kembali.</string>
     <string name="selectedSafUri">URI SAF yang dipilih:</string>
-    <string name="startServerAndExit">hanya mulai server</string>
-    <string name="startServerAndUi">mulai dengan server</string>
     <string name="filepickerCreateFolderError">Gagal membuat folder baru</string>
     <string name="filepickerNewFolder">Folder baru</string>
     <string name="filepickerNewFolderOk">@android:string/ok</string>
@@ -112,7 +107,6 @@
     <string name="filepickerName">Nama</string>
     <string name="filepickerFilename">Nama berkas</string>
     <string name="filepickerSelectSomethingFirst">Silakan pilih apa saja terlebih dahulu</string>
-    <string name="filepickerNeedValidFilename">Silakan masukkan atau pilih nama berkas yang valid</string>
     <string-array name="prefWhichServerToStartNames">
         <item>FTP dan SFTP</item>
         <item>Hanya FTP</item>
@@ -141,7 +135,6 @@
         <item>1</item>
         <item>2</item>
     </string-array>
-    <string name="open">Buka</string>
     <string name="saveToTextFile">Simpan ke berkas teks</string>
     <string name="download">Unduh</string>
     <string name="downloadOrSaveUrlToFile">Unduh atau simpan URL ke berkas teks \?</string>
@@ -151,9 +144,4 @@
     <string name="prefSummaryIdleTimeoutV2">Server akan menghentikan koneksi yang tidak aktif setelah ini dalam hitungan detik. Setel ke 0 untuk menonaktifkan.</string>
     <string name="prefSummaryQuickSettingsRequiresUnlock">Klik pada ikon pengaturan cepat membutuhkan perangkat tidak terkunci untuk memulai/meyetop server. Ketika diaktifkan, akan meminta konfirmasi untuk membuka perangkat jika terkunci.</string>
     <string name="prefTitleQuickSettingsRequiresUnlock">Syarat buka kunci Ikon Pengaturan Cepat</string>
-    <string name="statsReceivedPerSec">Diterima per detik</string>
-    <string name="statsSentPerSec">Terkirim per detik</string>
-    <string name="statsTotalReceived">Total Diterima</string>
-    <string name="statsTotalSent">Total Terkirim</string>
-    <string name="statsLabel">Stat</string>
 </resources>

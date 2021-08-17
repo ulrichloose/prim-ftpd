@@ -27,7 +27,6 @@
     <string name="toggleService">بدّل حالة بدء/إيقاف الخادم</string>
     <string name="notificationTitle">خادم FTP</string>
 
-    <string name="haveToSetPassword">يجب عليك تحديد كلمة سر أوّلاً</string>
     <string name="haveToSetAuthMechanism">يجب عليك تحديد آلية المصادقة أولاً</string>
     <string name="serverRunning">خادم FTP قيد التشغيل</string>
     <string name="serverCouldNotBeStarted">لا يمكن بدء الخادم! رسالة الخطأ: </string>
@@ -80,12 +79,10 @@
     <string name="prefTitleFtpPassivePorts">منافذ FTP الخاملة</string>
     <string name="prefSummaryFtpPassivePorts">المنافذ المستخدمة للاتّصالات الخاملة لنقل البيانات عن طريق FTP. يمكن أن يكون منفذاً وحيداً، أو قائمة أو نطاق من المنافذ. مثل: 5678,5700-5710,5800,5900.</string>
     <string name="prefTitleIdleTimeout">مهلة عدم نشاط الخادم</string>
-    <string name="prefSummaryIdleTimeout">سينهي الخادم الاتصالات الخاملة بعد هذا الوقت بالثواني. اضبط على 0 للتعطيل.</string>
     <string name="prefSummaryIdleTimeoutV2">سينهي الخادم الاتصالات الخاملة بعد هذا الوقت بالثواني. اضبط على 0 للتعطيل.</string>
     <string name="prefTheme">السمة</string>
     <string name="prefSummaryTheme">تغيير السمة سيتطلّب إعادة تشغيل التطبيق.</string>
     <string name="prefTitleLogging">السجل</string>
-    <string name="prefSummaryLogging">يفيد السجل في تحليل الأخطاء. إذا لم يعمل التطبيق بالشكل الصحيح على جهازك يمكنك إرسال السجل إلى المطوّرين. سيتطلّب إعادة تشغيل البرنامج.</string>
     <string name="prefSummaryLoggingV2">يفيد السجل في تحليل الأخطاء. إذا لم يعمل التطبيق بالشكل الصحيح على جهازك يمكنك إرسال السجل إلى المطوّرين. سيتطلّب إعادة تشغيل البرنامج. يتم حفظ السجلّات النصّيّة في %s.</string>
     <string name="prefAllowedIpsPattern">نمط عناوين IP المقبولة</string>
     <string name="prefSummaryAllowedIpsPattern">نمط عناوين IP المسموح لها الاتّصال. يمكن استخدام رمز بدل (*) واحد فقط، مكان الحرف الأخير.</string>
@@ -112,13 +109,9 @@
     <string name="safExplain">سيطلب منك لأندرويد أن تختار المسار الذي سيكون متوفّراً من خلال الخادم. من وقت لآخر قد يتم إلغاء الإذن وسيتوجّب عليك إعادة الاختيار.</string>
     <string name="selectedSafUri">اختر عنوان URI لـSAF:</string>
 
-    <string name="startServerAndExit">ابدأ الخادم فقط</string>
-    <string name="startServerAndUi">ابدأ مع الخادم</string>
-
     <string name="downloadOrSaveUrlToFile">تنزيل أو حفظ عنوان URL إلى ملف نصّي؟</string>
     <string name="download">تنزيل</string>
     <string name="saveToTextFile">حفظ إلى ملف نصّي</string>
-    <string name="open">فتح</string>
 
     <string name="filepickerCreateFolderError">خطأ في إنشاء المجلد</string>
     <string name="filepickerNewFolder">مجلّد جديد</string>
@@ -129,7 +122,6 @@
     <string name="filepickerName">الاسم</string>
     <string name="filepickerFilename">اسم الملف</string>
     <string name="filepickerSelectSomethingFirst">يرجى اختيار شيء أوّلاً</string>
-    <string name="filepickerNeedValidFilename">يرجى إدخال أو اختيار اسم ملف صالح</string>
 
     <string name="quickShare">المشاركة السريعة</string>
     <string name="quickShareServerStarted">تم بدء الخادم لمشاركة ملف واحد</string>

@@ -20,7 +20,6 @@
     <string name="stopService">Zerbitzaria gelditu</string>
     <string name="notificationTitle">FTP zerbitzaria</string>
 
-    <string name="haveToSetPassword">Pasahitz bat ezarri behar duzu lehenago</string>
     <string name="serverRunning">FTP zerbitzaria abian dago</string>
     <string name="serverCouldNotBeStarted">Zerbitzaria ezin izan da abiarazi! Akats mezua: </string>
     <string name="portInvalid_v2">Atakaren balioa ez da baliozkoa. 1024 eta 64000 tartean egon behar da.</string>
@@ -53,8 +52,7 @@
     <string name="prefTheme">Gaia</string>
     <string name="prefSummaryTheme">Gaia aldatzeak aplikazioa berrabiaraztea behar izan dezake.</string>
     <string name="prefTitleLogging">Erregistroa</string>
-    <string name="prefSummaryLogging">Erregistroa akatsak aztertzeko balio du. Aplikazioa zure gailuan zuzen funtzionatzen ez badu garatzaileei erregistroa bidali diezaiekezu. Aplikazioa berrabiaraztea behar izan dezake.</string>
-    
+
     <string name="licence">Lizentzia</string>
     <string name="reset">Berrezarri</string>
 

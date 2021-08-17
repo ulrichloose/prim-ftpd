@@ -34,7 +34,7 @@ public class FtpPrefsFragment extends PreferenceFragment
 		logger.debug("onCreate()");
 		addPreferencesFromResource(R.xml.preferences);
 
-		if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
+		
 			logger.debug("disabling announce prefs, sdk: {}", Build.VERSION.SDK_INT);
 			PreferenceCategory prefCat = (PreferenceCategory) getPreferenceManager().findPreference("ftpPrefCatSystem");
 
@@ -47,7 +47,7 @@ public class FtpPrefsFragment extends PreferenceFragment
 			prefCat = (PreferenceCategory) getPreferenceManager().findPreference("ftpPrefCatUi");
 			Preference showConnInfoPref = getPreferenceManager().findPreference(LoadPrefsUtil.PREF_KEY_SHOW_CONN_INFO);
 			prefCat.removePreference(showConnInfoPref);
-		}
+		
 
 		// context
 		final Context context = getActivity().getApplicationContext();

@@ -6,7 +6,6 @@
     <string name="quickShareCouldNotStartServer">Serverul nu a putut fi pornit</string>
     <string name="quickShareServerStarted">Serverul a pornit în partajare fișier unic</string>
     <string name="quickShare">Partajare rapidă</string>
-    <string name="filepickerNeedValidFilename">Vă rugăm să introduceți sau să selectați un nume de fișier valid</string>
     <string name="filepickerSelectSomethingFirst">Vă rugăm să selectați ceva întâi</string>
     <string name="filepickerFilename">Fișier</string>
     <string name="filepickerName">Nume</string>
@@ -16,12 +15,9 @@
     <string name="filepickerNewFolderOk">\@android:string/ok</string>
     <string name="filepickerNewFolder">Nou dosar</string>
     <string name="filepickerCreateFolderError">Nu s-a putut crea dosarul</string>
-    <string name="open">Deschide</string>
     <string name="saveToTextFile">Salvați în fișier text</string>
     <string name="download">Descarca</string>
     <string name="downloadOrSaveUrlToFile">Descărcați sau salvați adresa URL în fișierul text\?</string>
-    <string name="startServerAndUi">pornește cu serverul</string>
-    <string name="startServerAndExit">porniți numai serverul</string>
     <string name="selectedSafUri">Adresa SAF selectat:</string>
     <string name="safExplainHeading">Cum funcționează SAF</string>
     <string name="storageTypeRoSaf">Citește numai SAF (mai rapidrepede!)</string>
@@ -44,12 +40,10 @@
     <string name="prefSummaryAllowedIpsPattern">Modelul adreselor IP permise. Se poate folosi doar un wildcard (*), ca ultimul caracter.</string>
     <string name="prefAllowedIpsPattern">Model de adrese IP permise</string>
     <string name="prefSummaryLoggingV2">Logul servește la analiza erorilor. Dacă aplicația nu funcționează corect pe dispozitivul dvs., puteți trimite un log programatorilor. Poate fi necesar să reporniți aplicația. Jurnalele de text sunt stocate în %s .</string>
-    <string name="prefSummaryLogging">Logul servește la analiza erorilor. Dacă aplicația nu funcționează corect pe dispozitivul dvs., puteți trimite un log autorului. Poate fi necesar să reporniți aplicația.</string>
     <string name="prefTitleLogging">Log</string>
     <string name="prefSummaryTheme">Schimbarea temei poate necesita repornirea aplicației.</string>
     <string name="prefTheme">Tema</string>
     <string name="prefSummaryIdleTimeoutV2">Serverul va întrerupe conexiunile inactive după acest timp. Setați 0 pentru dezactivare.</string>
-    <string name="prefSummaryIdleTimeout">Serverul va întrerupe conexiunile inactive după acest timp (numai FTP)</string>
     <string name="prefTitleIdleTimeout">Timp de inactivitate server</string>
     <string name="prefSummaryFtpPassivePorts">Porturi pentru conexiunea de date pasive FTP. Poate fi un singur port, o listă sau o gamă de porturi. De exemplu. 5678.5700-5710.5800.5900.</string>
     <string name="prefTitleFtpPassivePorts">Porturi FTP Pasive</string>
@@ -99,7 +93,6 @@
     <string name="serverCouldNotBeStarted">Serverul nu poate porni ! Mesaj de eroare :</string>
     <string name="serverRunning">Serverul FTP rulează</string>
     <string name="haveToSetAuthMechanism">Trebuie setat un mecanism de autentificare înainte</string>
-    <string name="haveToSetPassword">Trebuie adăugată o parola întâi</string>
     <string name="notificationTitle">Server FTP</string>
     <string name="toggleService">Comuta Server start/stop</string>
     <string name="stopService">Oprește Server</string>

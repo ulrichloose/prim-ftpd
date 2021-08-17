@@ -17,7 +17,6 @@
     <string name="startService">Iniciar servidor</string>
     <string name="stopService">Detener servidor</string>
     <string name="notificationTitle">Servidor FTP</string>
-    <string name="haveToSetPassword">Antes hay que establecer una contraseña</string>
     <string name="serverRunning">El servidor FTP está funcionando</string>
     <string name="serverCouldNotBeStarted">¡El servidor no pudo arrancar! El error es el siguiente:</string>
     <string name="portInvalid_v2">La dirección de puerto no es correcta. Debe estar entre 1024 y 64000.</string>
@@ -49,7 +48,6 @@
     <string name="prefTheme">Tema</string>
     <string name="prefSummaryTheme">Al cambiar el tema deberías reiniciar la aplicación.</string>
     <string name="prefTitleLogging">Registro</string>
-    <string name="prefSummaryLogging">El registro permite analizar errores. Si la aplicación no funciona correctamente puedes enviar un registro a los desarrolladores. Deberías reiniciar la aplicación.</string>
     <string name="licence">Licencia</string>
     <string name="reset">Restaurar</string>
     <string name="widgetTextStart">iniciar (s)ftpd</string>
@@ -93,7 +91,6 @@
     <string name="prefTitleFtpPassivePorts">Puertos pasivos FTP</string>
     <string name="prefSummaryFtpPassivePorts">Puertos para conexión FTP de datos pasivos. Puede ser un único puerto o una lista. Ej.: 5678,5700-5710,5800,5900.</string>
     <string name="prefTitleIdleTimeout">Tiempo de espera de inactividad del servidor</string>
-    <string name="prefSummaryIdleTimeout">El servidor terminará las conexiones inactivas después de este tiempo en segundos (sólo FTP)</string>
     <string name="isAnonymous">Inicio de sesión anónimo: %1$b</string>
     <string name="selectServerAction">Selecciona acción del servidor</string>
     <string name="isServerRunning">¿Está funcionando el servidor?</string>
@@ -106,21 +103,17 @@
     <string name="safExplainHeading">Cómo funciona SAF</string>
     <string name="safExplain">Android te pedirá que elijas un directorio que estará disponible mediante el servidor. De vez en cuando el permiso puede revocarse y tendrás que seleccionarlo de nuevo.</string>
     <string name="selectedSafUri">Dirección URI de SAF elegida:</string>
-    <string name="startServerAndExit">iniciar sólo el servidor (sin interfaz)</string>
-    <string name="startServerAndUi">iniciar con el servidor</string>
     <string name="haveToSetAuthMechanism">Antes hay que configurar un método de autenticación</string>
     <string name="prefSummaryLoggingV2">Registra posibles fallos a la hora de servir archivos. Si la aplicación no funciona bien en tu dispositivo puedes enviárselo a los desarrolladores. Puede que haya que reiniciar la aplicación. Los registros de texto plano se guardan en %s.</string>
     <string name="prefAllowedIpsPattern">Patrón de IPs permitidas</string>
     <string name="prefSummaryAllowedIpsPattern">Patrón de direcciones IP permitidas. Sólo puede usarse un único asterisco (*) y debe de estar al final.</string>
     <string name="prefSummaryShowIpv6InNotification">Muestra direcciones IPv6 en la notificación si esta está visible.</string>
     <string name="prefSummaryIdleTimeoutV2">El servidor terminará las conexiones inactivas después de este tiempo en segundos. Establecer a 0 para desactivar.</string>
-    <string name="filepickerNeedValidFilename">Elige o introduce un nombre de archivo válido</string>
     <string name="passwordPresent">Con contraseña: %1$b</string>
     <string name="pubKeyAuth">Acceso con clave pública: %1$b</string>
     <string name="downloadOrSaveUrlToFile">¿Quieres descargar el contenido de la dirección URL o guardarla como un archivo de texto\?</string>
     <string name="download">Descargarla</string>
     <string name="saveToTextFile">Guardar como archivo de texto</string>
-    <string name="open">Abrir</string>
     <string name="filepickerCreateFolderError">No se ha podido crear la carpeta</string>
     <string name="filepickerNewFolder">Nueva carpeta</string>
     <string name="filepickerNewFolderOk">Aceptar</string>

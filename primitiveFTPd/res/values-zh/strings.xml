@@ -22,7 +22,6 @@
     <string name="stopService">停止服务器</string>
     <string name="toggleService">服务器启动/停止切换</string>
     <string name="notificationTitle">FTP 服务器</string>
-    <string name="haveToSetPassword">首先您需要设置密码</string>
     <string name="serverRunning">FTP 服务器正在运行</string>
     <string name="serverCouldNotBeStarted">无法启动服务器！错误信息：</string>
     <string name="portInvalid_v2">端口号无效。值必须在 1024 到 64000 之间。</string>
@@ -31,7 +30,6 @@
     <string name="invalidDir">文件夹无效。</string>
     <string name="couldNotReadKeyAuthKey">用于密钥验证的公钥不能被读取。请检查日志。</string>
     <string name="prefs">设置</string>
-    <string name="prefCategoryTitle">FTP 服务器设置</string>
     <string name="prefTitleUser">用户名</string>
     <string name="prefSummaryUser">FTP 服务器用户名</string>
     <string name="prefTitlePassword">密码</string>
@@ -61,12 +59,10 @@
     <string name="prefTitleFtpPassivePorts">FTP 被动端口</string>
     <string name="prefSummaryFtpPassivePorts">用于被动模式的数据端口。可以是单个端口，一系列端口或供随机选择的一个范围。例如 5678,5700-5710,5800,5900。</string>
     <string name="prefTitleIdleTimeout">服务器空闲超时</string>
-    <string name="prefSummaryIdleTimeout">当连接空闲时间超过这一秒数后，服务器将会关闭连接（仅限 FTP）</string>
     <string name="prefSummaryIdleTimeoutV2">当连接空闲超过此秒数时，服务器将关闭连接。 设置为0禁用。</string>
     <string name="prefTheme">主题</string>
     <string name="prefSummaryTheme">改变主题需要重启应用。</string>
     <string name="prefTitleLogging">日志</string>
-    <string name="prefSummaryLogging">日志可以用于分析错误。如果应用在你的设备上运行不正确，你可以将日志反馈给开发者。重启应用后生效。</string>
     <string name="licence">许可</string>
     <string name="reset">重置</string>
     <string name="widgetTextStart">启动 (S)FTP 服务</string>
@@ -95,8 +91,6 @@
     <string name="safExplainHeading">如何使用 SAF 模式</string>
     <string name="safExplain">在此模式下，Android 将让您选择一个希望访问的路径，服务器只能浏览此路径下的内容。若您重启了设备，应用对这一路径的访问权可能被吊销，您需要重新选择。</string>
     <string name="selectedSafUri">所选的 SAF URI：</string>
-    <string name="startServerAndExit">只启动服务</string>
-    <string name="startServerAndUi">启动服务并显示界面</string>
     <string name="prefTitleSshowIpv4InNotification">在通知中显示 IPv4 地址</string>
     <string name="prefSummaryShowIpv4InNotification">如果启用显示连接信息选项则在通知中显示 IPv4 地址。</string>
     <string name="prefTitleSshowIpv6InNotification">在通知中显示 IPv6 地址</string>
@@ -104,8 +98,6 @@
     <string name="passwordPresent">启用密码： %1$b</string>
     <string name="pubKeyAuth">公钥认证： $1$b</string>
     <string name="storageTypePlain">旧式文件系统</string>
-    <string name="filepickerNeedValidFilename">请输入或选择一个有效的文件名
-\n</string>
     <string name="filepickerSelectSomethingFirst">请选择</string>
     <string name="filepickerFilename">文件名</string>
     <string name="filepickerName">名字</string>

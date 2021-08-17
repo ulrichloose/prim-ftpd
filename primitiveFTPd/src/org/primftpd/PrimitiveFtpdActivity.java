@@ -413,10 +413,8 @@ public class PrimitiveFtpdActivity extends FragmentActivity {
 
 	protected boolean isLeftToRight() {
 		boolean isLeftToRight = true;
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
 			Configuration config = getResources().getConfiguration();
 			isLeftToRight = config.getLayoutDirection() == View.LAYOUT_DIRECTION_LTR;
-		}
 		return isLeftToRight;
 	}
 

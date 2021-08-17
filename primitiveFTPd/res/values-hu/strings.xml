@@ -22,7 +22,6 @@
     <string name="startService">Szerver indítása</string>
     <string name="stopService">Szerver leállítása</string>
     <string name="notificationTitle">FTP szerver</string>
-    <string name="haveToSetPassword">Először jelszót kell beállítani</string>
     <string name="serverRunning">FTP Szerver működik</string>
     <string name="invalidDir">A könyvtár nem érvényes.</string>
     <string name="prefTitleUser">Felhasználónév</string>
@@ -49,8 +48,6 @@
     <string name="prefSummaryAllowedIpsPattern">Az engedélyezett IP-címek alakja. Csak egy helyettesítő karakter (*) használható, és csak utolsó karakterként.</string>
     <string name="prefAllowedIpsPattern">Engedélyezett IP-mód</string>
     <string name="prefSummaryLoggingV2">"A napló a hibák elemzését szolgálja. Ha az alkalmazás nem működik megfelelően az eszközén, akkor a naplót elküldheti a fejlesztőknek. Szükség lehet az app újraindítására. A szövegnaplókat  %s tárolja."</string>
-    <string name="prefSummaryLogging">A napló a hibák elemzését szolgálja. Ha az alkalmazás nem működik megfelelően az eszközén, a naplót elküldhei a fejlesztőknek. Ehhez az alkalmazás újraindítására is szükség lehet .</string>
-    <string name="prefSummaryIdleTimeout">A kiszolgáló az üresjárati kapcsolatokat másodpercben megadott idő után megszakítja (csak FTP).</string>
     <string name="prefSummaryIdleTimeoutV2">A kiszolgáló az üresjárati kapcsolatokat a másodpercben megadott idő után megszakítja. A letiltáshoz állítsa 0-ra.</string>
     <string name="prefTitleIdleTimeout">Szerver alap(értelmezett) időtúllépés</string>
     <string name="prefSummaryAnonymousLogin">Névtelen bejelentkezés engedélyezett-e a szerveren.</string>
@@ -93,13 +90,10 @@
     <string name="portsEqual_v2">A portok azonosak. Így nem működhet.</string>
     <string name="serverCouldNotBeStarted">A szerver nem indítható el! Hibaüzenet:</string>
     <string name="safExplain">Az Android kéri, hogy válassza ki a könyvtárat. Ez a szerver(ek)en keresztül elérhető lesz. Időnként visszavonódhatnak az engedélyek, és újra meg kell őket adnia!</string>
-    <string name="filepickerNeedValidFilename">Kérem írjon be vagy válasszon érvényes fájlnevet!</string>
     <string name="filepickerSelectSomethingFirst">Kérem először válasszon ki valamit</string>
     <string name="filepickerFilename">Fájlnév</string>
     <string name="filepickerNewFolder">Új mappa</string>
     <string name="filepickerCreateFolderError">Hiba a mappa létrehozásakor</string>
-    <string name="startServerAndUi">Szerver indítása felhasználói felülettel (UI)</string>
-    <string name="startServerAndExit">Csak szerverindítás és kilépés</string>
     <string name="selectedSafUri">Kiválasztott SAF URI:</string>
     <string name="storageTypeRoSaf">Csak olvasható SAF (gyorsabb!)</string>
     <string name="storageTypeSaf">Android Storage Access Framework (SAF)
