@@ -27,9 +27,9 @@ package org.apache.ftpserver.ftplet;
  */
 public class DefaultFtpReply implements FtpReply {
 
-    private int code;
+    private final int code;
 
-    private String message;
+    private final String message;
     
     /**
      * time when this reply was sent.  

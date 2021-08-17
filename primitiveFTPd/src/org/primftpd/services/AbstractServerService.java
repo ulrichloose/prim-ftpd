@@ -1,12 +1,10 @@
 package org.primftpd.services;
 
-import android.annotation.TargetApi;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.HandlerThread;
 import android.os.IBinder;
@@ -179,9 +177,8 @@ public abstract class AbstractServerService
 	/**
 	 * Register a DNS-SD service (to be discoverable through Bonjour/Avahi).
 	 */
-	@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
 	protected void announceService () {
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+
 			nsdRegistrationListener = new NsdManager.RegistrationListener() {
 				@Override
 				public void onServiceRegistered(NsdServiceInfo serviceInfo) {
@@ -221,15 +218,15 @@ public abstract class AbstractServerService
 					serviceInfo,
 					NsdManager.PROTOCOL_DNS_SD,
 					nsdRegistrationListener);
-		}
+
 	}
 
-	@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+
 	protected void unannounceService () {
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+
 			NsdManager nsdManager = (NsdManager) getSystemService(Context.NSD_SERVICE);
 			nsdManager.unregisterService(nsdRegistrationListener);
-		}
+
 	}
 
 	protected void cleanQuickShareTmpDir() {

@@ -48,36 +48,36 @@ public class DefaultFtpStatistics implements ServerFtpStatistics {
 
     private Date startTime = new Date();
 
-    private AtomicInteger uploadCount = new AtomicInteger(0);
+    private final AtomicInteger uploadCount = new AtomicInteger(0);
 
-    private AtomicInteger downloadCount = new AtomicInteger(0);
+    private final AtomicInteger downloadCount = new AtomicInteger(0);
 
-    private AtomicInteger deleteCount = new AtomicInteger(0);
+    private final AtomicInteger deleteCount = new AtomicInteger(0);
 
-    private AtomicInteger mkdirCount = new AtomicInteger(0);
+    private final AtomicInteger mkdirCount = new AtomicInteger(0);
 
-    private AtomicInteger rmdirCount = new AtomicInteger(0);
+    private final AtomicInteger rmdirCount = new AtomicInteger(0);
 
-    private AtomicInteger currLogins = new AtomicInteger(0);
+    private final AtomicInteger currLogins = new AtomicInteger(0);
 
-    private AtomicInteger totalLogins = new AtomicInteger(0);
+    private final AtomicInteger totalLogins = new AtomicInteger(0);
 
-    private AtomicInteger totalFailedLogins = new AtomicInteger(0);
+    private final AtomicInteger totalFailedLogins = new AtomicInteger(0);
 
-    private AtomicInteger currAnonLogins = new AtomicInteger(0);
+    private final AtomicInteger currAnonLogins = new AtomicInteger(0);
 
-    private AtomicInteger totalAnonLogins = new AtomicInteger(0);
+    private final AtomicInteger totalAnonLogins = new AtomicInteger(0);
 
-    private AtomicInteger currConnections = new AtomicInteger(0);
+    private final AtomicInteger currConnections = new AtomicInteger(0);
 
-    private AtomicInteger totalConnections = new AtomicInteger(0);
+    private final AtomicInteger totalConnections = new AtomicInteger(0);
 
-    private AtomicLong bytesUpload = new AtomicLong(0L);
+    private final AtomicLong bytesUpload = new AtomicLong(0L);
 
-    private AtomicLong bytesDownload = new AtomicLong(0L);
+    private final AtomicLong bytesDownload = new AtomicLong(0L);
 
     private static class UserLogins {
-        private Map<InetAddress, AtomicInteger> perAddress = new ConcurrentHashMap<InetAddress, AtomicInteger>();
+        private final Map<InetAddress, AtomicInteger> perAddress = new ConcurrentHashMap<InetAddress, AtomicInteger>();
 
         public UserLogins(InetAddress address) {
             // init with the first connection
@@ -100,7 +100,7 @@ public class DefaultFtpStatistics implements ServerFtpStatistics {
     /**
      *The user login information.
      */
-    private Map<String, UserLogins> userLoginTable = new ConcurrentHashMap<String, UserLogins>();
+    private final Map<String, UserLogins> userLoginTable = new ConcurrentHashMap<String, UserLogins>();
 
     public static final String LOGIN_NUMBER = "login_number";
 

@@ -63,9 +63,6 @@ public class ECCurves {
 
     public static String getCurveName(int fieldSize) {
         String curveName = CURVE_SIZES.get(fieldSize);
-        if (curveName == null) {
-            return null;
-        }
         return curveName;
     }
 

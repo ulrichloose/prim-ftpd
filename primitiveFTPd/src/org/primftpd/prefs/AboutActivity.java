@@ -53,10 +53,10 @@ public class AboutActivity extends Activity
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		// show version num
-        TextView versionLabel = (TextView)findViewById(R.id.versionLabel);
+        TextView versionLabel = findViewById(R.id.versionLabel);
         versionLabel.setText("Version");
 
-        TextView versionView = (TextView)findViewById(R.id.versionTextView);
+        TextView versionView = findViewById(R.id.versionTextView);
         String pkgName = getPackageName();
         PackageManager pkgMgr = getPackageManager();
         PackageInfo packageInfo = null;
@@ -80,7 +80,7 @@ public class AboutActivity extends Activity
         versionView.setText(version);
 
         // show licence
-        TextView lisenseView = ((TextView)findViewById(R.id.licenceTextView));
+        TextView lisenseView = findViewById(R.id.licenceTextView);
         lisenseView.setText("APL \n"+URL_APL);
 
         // show other links

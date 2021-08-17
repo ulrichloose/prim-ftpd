@@ -38,7 +38,7 @@ public class Daemon {
 
     private static FtpServer server;
 
-    private static Object lock = new Object();
+    private static final Object lock = new Object();
 
     /**
      * Main entry point for the daemon

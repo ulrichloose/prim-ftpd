@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
+@SuppressWarnings("ALL")
 public abstract class PowerTogglesPlugin extends BroadcastReceiver {
 
     // Intent send by PowerToggles asking for a state change

@@ -35,7 +35,7 @@ import org.apache.sshd.server.ExitCallback;
  */
 public class UnknownCommand implements Command {
 
-    private String command;
+    private final String command;
     private InputStream in;
     private OutputStream out;
     private OutputStream err;

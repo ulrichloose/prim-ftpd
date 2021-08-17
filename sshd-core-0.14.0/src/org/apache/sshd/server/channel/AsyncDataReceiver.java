@@ -27,7 +27,7 @@ import org.apache.sshd.common.util.Buffer;
 
 public class AsyncDataReceiver implements ChannelDataReceiver {
 
-    private ChannelAsyncInputStream in;
+    private final ChannelAsyncInputStream in;
 
     public AsyncDataReceiver(Channel channel) {
         in = new ChannelAsyncInputStream(channel);

@@ -45,9 +45,9 @@ public class DH extends AbstractDH {
     private BigInteger e;  // my public key
     private byte[] e_array;
     private BigInteger f;  // your public key
-    private KeyPairGenerator myKpairGen;
-    private KeyAgreement myKeyAgree;
-    private Factory<Digest> factory;
+    private final KeyPairGenerator myKpairGen;
+    private final KeyAgreement myKeyAgree;
+    private final Factory<Digest> factory;
 
     public DH() throws Exception {
         this(new SHA1.Factory());

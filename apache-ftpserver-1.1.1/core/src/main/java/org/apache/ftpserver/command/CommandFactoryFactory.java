@@ -142,7 +142,7 @@ public class CommandFactoryFactory {
         DEFAULT_COMMAND_MAP.put("USER", new USER());
     }
 
-    private Map<String, Command> commandMap = new HashMap<String, Command>();
+    private final Map<String, Command> commandMap = new HashMap<String, Command>();
 
     private boolean useDefaultCommands = true;
 

@@ -40,7 +40,7 @@ import org.apache.ftpserver.message.MessageResource;
  */
 public class FtpServerFactory {
 
-    private DefaultFtpServerContext serverContext;
+    private final DefaultFtpServerContext serverContext;
 
     /**
      * Creates a server with the default configuration

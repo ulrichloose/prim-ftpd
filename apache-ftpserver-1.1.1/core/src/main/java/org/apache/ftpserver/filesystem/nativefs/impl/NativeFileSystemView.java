@@ -45,7 +45,7 @@ public class NativeFileSystemView implements FileSystemView {
 
 
     // the root directory will always end with '/'.
-    private String rootDir;
+    private final String rootDir;
 
     // the first and the last character will always be '/'
     // It is always with respect to the root directory.

@@ -199,7 +199,7 @@ public class IoUtils {
      */
     public final static void copy(Reader input, Writer output, int bufferSize)
             throws IOException {
-        char buffer[] = new char[bufferSize];
+        char[] buffer = new char[bufferSize];
         int n = 0;
         while ((n = input.read(buffer)) != -1) {
             output.write(buffer, 0, n);
@@ -215,7 +215,7 @@ public class IoUtils {
      */
     public final static void copy(InputStream input, OutputStream output,
             int bufferSize) throws IOException {
-        byte buffer[] = new byte[bufferSize];
+        byte[] buffer = new byte[bufferSize];
         int n = 0;
         while ((n = input.read(buffer)) != -1) {
             output.write(buffer, 0, n);

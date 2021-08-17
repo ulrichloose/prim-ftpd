@@ -70,7 +70,7 @@ import androidx.fragment.app.FragmentActivity;
  */
 public class PrimitiveFtpdActivity extends FragmentActivity {
 
-	private BroadcastReceiver networkStateReceiver = new BroadcastReceiver() {
+	private final BroadcastReceiver networkStateReceiver = new BroadcastReceiver() {
 		@Override
 	 	public void onReceive(Context context, Intent intent) {
 		logger.debug("network connectivity changed, data str: '{}', action: '{}'",
@@ -82,7 +82,7 @@ public class PrimitiveFtpdActivity extends FragmentActivity {
 
 	// flag must be static to be avail after activity change
 	private static boolean prefsChanged = false;
-	private OnSharedPreferenceChangeListener prefsChangeListener =
+	private final OnSharedPreferenceChangeListener prefsChangeListener =
 		new OnSharedPreferenceChangeListener()
 	{
 		@Override public void onSharedPreferenceChanged(
@@ -102,8 +102,8 @@ public class PrimitiveFtpdActivity extends FragmentActivity {
 	protected Logger logger = LoggerFactory.getLogger(getClass());
 
 	private PrefsBean prefsBean;
-	private IpAddressProvider ipAddressProvider = new IpAddressProvider();
-	private KeyFingerprintProvider keyFingerprintProvider = new KeyFingerprintProvider();
+	private final IpAddressProvider ipAddressProvider = new IpAddressProvider();
+	private final KeyFingerprintProvider keyFingerprintProvider = new KeyFingerprintProvider();
 	private Theme theme;
 	private ServersRunningBean serversRunning;
 	private long timestampOfLastEvent = 0;
@@ -422,7 +422,7 @@ public class PrimitiveFtpdActivity extends FragmentActivity {
 	 * Creates table containing network interfaces.
 	 */
 	protected void showAddresses() {
-		LinearLayout container = (LinearLayout)findViewById(R.id.addressesContainer);
+		LinearLayout container = findViewById(R.id.addressesContainer);
 
 		// clear old entries
 		container.removeAllViews();
@@ -473,23 +473,23 @@ public class PrimitiveFtpdActivity extends FragmentActivity {
 	}
 
 	protected void showLogindata() {
-		TextView usernameView = (TextView)findViewById(R.id.usernameTextView);
+		TextView usernameView = findViewById(R.id.usernameTextView);
 		usernameView.setText(prefsBean.getUserName());
 
-		TextView anonymousView = (TextView)findViewById(R.id.anonymousLoginTextView);
+		TextView anonymousView = findViewById(R.id.anonymousLoginTextView);
 		anonymousView.setText(getString(R.string.isAnonymous, prefsBean.isAnonymousLogin()));
 
-		TextView passwordPresentView = (TextView)findViewById(R.id.passwordPresentTextView);
+		TextView passwordPresentView = findViewById(R.id.passwordPresentTextView);
 		passwordPresentView.setText(getString(R.string.passwordPresent,
 				StringUtils.isNotEmpty(prefsBean.getPassword())));
 
-		TextView pubKeyAuthView = (TextView)findViewById(R.id.pubKeyAuthTextView);
+		TextView pubKeyAuthView = findViewById(R.id.pubKeyAuthTextView);
 		pubKeyAuthView.setText(getString(R.string.pubKeyAuth, prefsBean.isPubKeyAuth()));
 	}
 
 	protected void showSafUrl(String url) {
 		findViewById(R.id.safUriLabel).setVisibility(View.VISIBLE);
-		TextView safUriView = (TextView)findViewById(R.id.safUri);
+		TextView safUriView = findViewById(R.id.safUri);
 		safUriView.setVisibility(View.VISIBLE);
 		safUriView.setText(url);
 	}
@@ -741,7 +741,7 @@ public class PrimitiveFtpdActivity extends FragmentActivity {
 	}
 
 	@Override
-	public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
 		logger.trace("onRequestPermissionsResult()");
 		boolean granted = grantResults.length > 0
 				&& grantResults[0] == PackageManager.PERMISSION_GRANTED;

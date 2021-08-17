@@ -33,7 +33,7 @@ public class AndroidPrefsUserManager implements UserManager {
 
 	private final PrefsBean prefsBean;
 
-	private Map<String, User> nameToUser = new HashMap<>();
+	private final Map<String, User> nameToUser = new HashMap<>();
 
 	public AndroidPrefsUserManager(PrefsBean prefsBean) {
 		this.prefsBean = prefsBean;

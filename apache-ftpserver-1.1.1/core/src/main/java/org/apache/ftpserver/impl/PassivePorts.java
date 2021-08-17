@@ -41,21 +41,21 @@ import org.slf4j.LoggerFactory;
  */
 public class PassivePorts {
 
-    private Logger log = LoggerFactory.getLogger(PassivePorts.class);
+    private final Logger log = LoggerFactory.getLogger(PassivePorts.class);
 
     private static final int MAX_PORT = 65535;
 
     private static final Integer MAX_PORT_INTEGER = Integer.valueOf(MAX_PORT);
 
-    private List<Integer> freeList;
+    private final List<Integer> freeList;
 
-    private Set<Integer> usedList;
+    private final Set<Integer> usedList;
 
-    private Random r = new Random();
+    private final Random r = new Random();
 
     private String passivePortsString;
 
-    private boolean checkIfBound;
+    private final boolean checkIfBound;
 
     /**
      * Parse a string containing passive ports

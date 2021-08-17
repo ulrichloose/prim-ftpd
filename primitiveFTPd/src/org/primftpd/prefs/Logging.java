@@ -11,7 +11,7 @@ public enum Logging
 	NONE("0");
 
 	private final String xmlValue;
-	private Logging(String xmlValue) {
+	Logging(String xmlValue) {
 		this.xmlValue = xmlValue;
 	}
 	public String xmlValue() {

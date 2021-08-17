@@ -12,6 +12,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 import java.security.KeyFactory;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -79,8 +80,8 @@ public class KeyInfoProvider
 			String hexString = Integer.toHexString(b);
 			if (hexString.length() > 2) {
 				hexString = hexString.substring(
-				hexString.length() - 2,
-				hexString.length());
+				hexString.length() - 2
+                );
 			} else if (hexString.length() < 2) {
 				hexString = "0" + hexString;
 			}
@@ -102,7 +103,7 @@ public class KeyInfoProvider
 	{
 		ByteArrayOutputStream buf = new ByteArrayOutputStream();
 
-		byte[] name = "ssh-rsa".getBytes("US-ASCII");
+		byte[] name = "ssh-rsa".getBytes(StandardCharsets.US_ASCII);
 		writeKeyPart(name, buf);
 
 		writeKeyPart(pubKey.getPublicExponent().toByteArray(), buf);

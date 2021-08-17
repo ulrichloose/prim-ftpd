@@ -50,7 +50,7 @@ public abstract class NewItemFragment extends DialogFragment {
             @Override
             public void onShow(DialogInterface dialog1) {
                 final AlertDialog dialog = (AlertDialog) dialog1;
-                final EditText editText = (EditText) dialog.findViewById(R.id.filepicker_foldername_edit_text);
+                final EditText editText = dialog.findViewById(R.id.filepicker_foldername_edit_text);
 
                 if (editText == null) {
                     throw new NullPointerException("Could not find an edit text in the dialog");

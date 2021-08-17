@@ -48,7 +48,7 @@ public class SecurityUtils {
     public static synchronized KeyFactory getKeyFactory(String algorithm) throws NoSuchAlgorithmException, NoSuchProviderException {
         KeyFactory result = KeyFactory.getInstance(algorithm);
         LOG.trace("getKeyFactory({}) -> {}", algorithm, safeClassname(result));
-        return (KeyFactory)result;
+        return result;
     }
 
     public static synchronized Cipher getCipher(String transformation) throws NoSuchAlgorithmException, NoSuchPaddingException, NoSuchProviderException {

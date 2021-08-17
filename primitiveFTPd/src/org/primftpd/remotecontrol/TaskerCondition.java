@@ -11,7 +11,7 @@ public enum TaskerCondition {
     final private int stringId;
     final private String blurb;
 
-    private TaskerCondition(int stringId, String blurb) {
+    TaskerCondition(int stringId, String blurb) {
         this.stringId = stringId;
         this.blurb = blurb;
     }
@@ -24,7 +24,7 @@ public enum TaskerCondition {
         return blurb;
     }
 
-    private static Map<String, TaskerCondition> BLURB_TO_CONDITION;
+    private static final Map<String, TaskerCondition> BLURB_TO_CONDITION;
     static {
         BLURB_TO_CONDITION = new HashMap<>();
         for (TaskerCondition condition : values()) {

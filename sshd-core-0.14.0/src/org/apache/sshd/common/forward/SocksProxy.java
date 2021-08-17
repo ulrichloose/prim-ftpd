@@ -126,10 +126,10 @@ public class SocksProxy extends CloseableUtils.AbstractCloseable implements IoHa
                     throw new IllegalStateException("Unsupported socks command: " + cmd);
                 }
                 int port = getUShort(buffer);
-                String host = Integer.toString(getUByte(buffer)) + "."
-                            + Integer.toString(getUByte(buffer)) + "."
-                            + Integer.toString(getUByte(buffer)) + "."
-                            + Integer.toString(getUByte(buffer));
+                String host = getUByte(buffer) + "."
+                            + getUByte(buffer) + "."
+                            + getUByte(buffer) + "."
+                            + getUByte(buffer);
                 String userId = getNTString(buffer);
                 // Socks4a
                 if (host.startsWith("0.0.0.")) {
@@ -222,10 +222,10 @@ public class SocksProxy extends CloseableUtils.AbstractCloseable implements IoHa
                 int type = buffer.getByte();
                 String host;
                 if (type == 0x01) {
-                    host = Integer.toString(getUByte(buffer)) + "."
-                         + Integer.toString(getUByte(buffer)) + "."
-                         + Integer.toString(getUByte(buffer)) + "."
-                         + Integer.toString(getUByte(buffer));
+                    host = getUByte(buffer) + "."
+                         + getUByte(buffer) + "."
+                         + getUByte(buffer) + "."
+                         + getUByte(buffer);
                 } else if (type == 0x03) {
                     host = getBLString(buffer);
                 } else if (type == 0x04) {

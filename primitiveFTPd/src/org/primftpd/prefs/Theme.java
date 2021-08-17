@@ -15,7 +15,7 @@ public enum Theme
 	private final String themeName;
 	private final int resourceId;
 
-	private Theme(String xmlValue, String themeName, int resourceId) {
+	Theme(String xmlValue, String themeName, int resourceId) {
 		this.xmlValue = xmlValue;
 		this.themeName = themeName;
 		this.resourceId = resourceId;

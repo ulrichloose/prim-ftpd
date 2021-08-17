@@ -35,24 +35,24 @@ public interface ClientFactoryManager extends FactoryManager {
     /**
      * Key used to set the heartbeat interval in milliseconds (0 to disable which is the default value)
      */
-    public static final String HEARTBEAT_INTERVAL = "hearbeat-interval";
+    String HEARTBEAT_INTERVAL = "hearbeat-interval";
 
     /**
      * Key used to check the hearbeat request that should be sent to the server (default is keepalive@sshd.apache.org).
      */
-    public static final String HEARTBEAT_REQUEST = "heartbeat-request";
+    String HEARTBEAT_REQUEST = "heartbeat-request";
 
     /**
      * Ordered comma separated list of authentications methods.
      * Authentications methods accepted by the server will be tried in the given order.
      */
-    public static final String PREFERRED_AUTHS = "preferred-auths";
+    String PREFERRED_AUTHS = "preferred-auths";
 
     /**
      * Specifies the number of password prompts before giving up.
      * The argument to this keyword must be an integer.  The default is 3.
      */
-    public static final String PASSWORD_PROMPTS = "password-prompts";
+    String PASSWORD_PROMPTS = "password-prompts";
 
     /**
      * Retrieve the server key verifier to be used to check the key when connecting

@@ -3,7 +3,7 @@ package org.primftpd.events;
 import java.util.Date;
 
 public class ClientActionEvent {
-    public static enum Storage {
+    public enum Storage {
         FS,
         ROOT,
         SAF,
@@ -11,12 +11,12 @@ public class ClientActionEvent {
         QUICKSHARE
     }
 
-    public static enum Protocol {
+    public enum Protocol {
         FTP,
         SFTP
     }
 
-    public static enum ClientAction {
+    public enum ClientAction {
         LIST_DIR,
         CREATE_DIR,
         RENAME,

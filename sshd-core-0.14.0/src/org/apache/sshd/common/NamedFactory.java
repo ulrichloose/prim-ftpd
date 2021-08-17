@@ -42,7 +42,7 @@ public interface NamedFactory<T> extends Factory<T> {
     /**
      * Utility class to help using NamedFactories
      */
-    public static class Utils {
+    class Utils {
     	/**
     	 * @param factories The named factories
     	 * @return A {@link List} of all the factories names - in same order

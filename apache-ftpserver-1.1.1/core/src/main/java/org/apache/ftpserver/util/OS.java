@@ -229,7 +229,7 @@ public final class OS {
                     isFamily = OS_NAME.indexOf(FAMILY_OPENVMS) > -1;
                 } else {
                     throw new IllegalArgumentException(
-                            "Don\'t know how to detect os family \"" + family
+                            "Don't know how to detect os family \"" + family
                                     + "\"");
                 }
             }

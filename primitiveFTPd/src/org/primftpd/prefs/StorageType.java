@@ -12,7 +12,7 @@ public enum StorageType {
     RO_SAF("4");
 
     private final String xmlValue;
-    private StorageType(String xmlValue) {
+    StorageType(String xmlValue) {
         this.xmlValue = xmlValue;
     }
     public String xmlValue() {

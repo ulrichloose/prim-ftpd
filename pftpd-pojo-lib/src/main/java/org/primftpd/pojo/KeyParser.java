@@ -112,7 +112,7 @@ public class KeyParser {
         ByteBuffer byteBuffer = ByteBuffer.wrap(keyBytes);
         int nameLength = byteBuffer.getInt();
         // cast to Buffer to avoid issue with java 8, see GH #226
-        ((Buffer)byteBuffer).position(nameLength + LENGTH_LENGTH);
+        byteBuffer.position(nameLength + LENGTH_LENGTH);
 
         BigInteger exponent = readNext(byteBuffer);
         BigInteger modulus = readNext(byteBuffer);
@@ -126,7 +126,7 @@ public class KeyParser {
         ByteBuffer byteBuffer = ByteBuffer.wrap(keyBytes);
         int nameLength = byteBuffer.getInt();
         // cast to Buffer to avoid issue with java 8, see GH #226
-        ((Buffer)byteBuffer).position(nameLength + LENGTH_LENGTH);
+        byteBuffer.position(nameLength + LENGTH_LENGTH);
 
         BigInteger p = readNext(byteBuffer);
         BigInteger q = readNext(byteBuffer);

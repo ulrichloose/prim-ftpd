@@ -39,36 +39,36 @@ public interface FactoryManager {
      * Key used to retrieve the value of the window size in the
      * configuration properties map.
      */
-    public static final String WINDOW_SIZE = "window-size";
+    String WINDOW_SIZE = "window-size";
 
     /**
      * Key used to retrieve the value of the maximum packet size
      * in the configuration properties map.
      */
-    public static final String MAX_PACKET_SIZE = "packet-size";
+    String MAX_PACKET_SIZE = "packet-size";
 
     /**
      * Number of NIO worker threads to use.
      */
-    public static final String NIO_WORKERS = "nio-workers";
+    String NIO_WORKERS = "nio-workers";
 
     /**
      * Default number of worker threads to use.
      */
-    public static final int DEFAULT_NIO_WORKERS = Runtime.getRuntime().availableProcessors() + 1;
+    int DEFAULT_NIO_WORKERS = Runtime.getRuntime().availableProcessors() + 1;
 
     /**
      * Key used to retrieve the value of the timeout after which
      * it will close the connection if the other side has not been
      * authenticated.
      */
-    public static final String AUTH_TIMEOUT = "auth-timeout";
+    String AUTH_TIMEOUT = "auth-timeout";
 
     /**
      * Key used to retrieve the value of idle timeout after which
      * it will close the connection.  In milliseconds.
      */
-    public static final String IDLE_TIMEOUT = "idle-timeout";
+    String IDLE_TIMEOUT = "idle-timeout";
 
     /**
      * Key used to retrieve the value of the disconnect timeout which
@@ -76,56 +76,56 @@ public interface FactoryManager {
      * message has not been sent before the timeout, the underlying socket
      * will be forcibly closed.
      */
-    public static final String DISCONNECT_TIMEOUT = "disconnect-timeout";
+    String DISCONNECT_TIMEOUT = "disconnect-timeout";
 
     /**
      * Key used to configure the timeout used when writing a close request
      * on a channel. If the message can not be written before the specified
      * timeout elapses, the channel will be immediately closed. In milliseconds.
      */
-    public static final String CHANNEL_CLOSE_TIMEOUT = "channel-close-timeout";
+    String CHANNEL_CLOSE_TIMEOUT = "channel-close-timeout";
 
     /**
      * Socket backlog.
      * See {@link java.nio.channels.AsynchronousServerSocketChannel#bind(java.net.SocketAddress, int)}
      */
-    public static final String SOCKET_BACKLOG = "socket-backlog";
+    String SOCKET_BACKLOG = "socket-backlog";
 
     /**
      * Socket keep-alive.
      * See {@link java.net.StandardSocketOptions#SO_KEEPALIVE}
      */
-    public static final String SOCKET_KEEPALIVE = "socket-keepalive";
+    String SOCKET_KEEPALIVE = "socket-keepalive";
 
     /**
      * Socket send buffer size.
      * See {@link java.net.StandardSocketOptions#SO_SNDBUF}
      */
-    public static final String SOCKET_SNDBUF = "socket-sndbuf";
+    String SOCKET_SNDBUF = "socket-sndbuf";
 
     /**
      * Socket receive buffer size.
      * See {@link java.net.StandardSocketOptions#SO_RCVBUF}
      */
-    public static final String SOCKET_RCVBUF = "socket-rcvbuf";
+    String SOCKET_RCVBUF = "socket-rcvbuf";
 
     /**
      * Socket reuse address.
      * See {@link java.net.StandardSocketOptions#SO_REUSEADDR}
      */
-    public static final String SOCKET_REUSEADDR = "socket-reuseaddr";
+    String SOCKET_REUSEADDR = "socket-reuseaddr";
 
     /**
      * Socket linger.
      * See {@link java.net.StandardSocketOptions#SO_LINGER}
      */
-    public static final String SOCKET_LINGER = "socket-linger";
+    String SOCKET_LINGER = "socket-linger";
 
     /**
      * Socket tcp no-delay.
      * See {@link java.net.StandardSocketOptions#TCP_NODELAY}
      */
-    public static final String TCP_NODELAY = "tcp-nodelay";
+    String TCP_NODELAY = "tcp-nodelay";
 
     /**
      * A map of properties that can be used to configure the SSH server

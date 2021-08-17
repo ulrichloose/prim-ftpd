@@ -5,11 +5,11 @@ import org.primftpd.prefs.PrefsBean;
 
 public interface PftpdService {
 
-    public void postClientAction(
+    void postClientAction(
             ClientActionEvent.Storage storage,
             ClientActionEvent.ClientAction clientAction,
             String clientIp,
             String path);
 
-    public PrefsBean getPrefsBean();
+    PrefsBean getPrefsBean();
 }

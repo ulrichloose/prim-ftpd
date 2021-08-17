@@ -36,7 +36,7 @@ import org.slf4j.LoggerFactory;
  * @author Kohsuke Kawaguchi
  */
 public class PipeDataReceiver implements ChannelDataReceiver {
-    private InputStream in;
+    private final InputStream in;
     private OutputStream out;
 
     public PipeDataReceiver(Window localWindow) {

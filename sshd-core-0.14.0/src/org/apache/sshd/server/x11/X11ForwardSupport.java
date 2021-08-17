@@ -42,7 +42,7 @@ import org.apache.sshd.common.util.Readable;
  */
 public class X11ForwardSupport extends CloseableUtils.AbstractInnerCloseable implements IoHandler, Closeable {
 
-    private static String xauthCommand = System.getProperty("sshd.xauthCommand", "xauth");
+    private static final String xauthCommand = System.getProperty("sshd.xauthCommand", "xauth");
 
     public static final int X11_DISPLAY_OFFSET = 10;
     public static final int MAX_DISPLAYS = 1000;

@@ -27,7 +27,7 @@ public class CsvLoggerFactory implements ILoggerFactory
 
 	public static final String LOGFILE_BASENAME = "prim-ftpd-log-";
 	private static final int NUM_LOGFILES_TO_KEEP = 3;
-	private static DateFormat FILENAME_DATEFORMAT = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
+	private static final DateFormat FILENAME_DATEFORMAT = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
 
 	private final Map<String, Logger> loggerMap = new HashMap<String, Logger>();
 

@@ -144,17 +144,13 @@ public final class SelectorUtils {
             strIdxStart++;
         }
 
+        // String not exhausted, but pattern is. Failure.
+        // pattern now holds ** while string is not exhausted
+        // this will generate false positives but we can live with that.
         if (strIdxStart > strIdxEnd) {
             // String is exhausted
             return true;
-        } else if (patIdxStart > patIdxEnd) {
-            // String not exhausted, but pattern is. Failure.
-            return false;
-        } else {
-            // pattern now holds ** while string is not exhausted
-            // this will generate false positives but we can live with that.
-            return true;
-        }
+        } else return patIdxStart <= patIdxEnd;
     }
 
     /**
@@ -222,11 +218,11 @@ public final class SelectorUtils {
 
         // up to first '**'
         while (patIdxStart <= patIdxEnd && strIdxStart <= strIdxEnd) {
-            String patDir = (String) patDirs.get(patIdxStart);
+            String patDir = patDirs.get(patIdxStart);
             if (patDir.equals("**")) {
                 break;
             }
-            if (!match(patDir, (String) strDirs.get(strIdxStart),
+            if (!match(patDir, strDirs.get(strIdxStart),
                     isCaseSensitive)) {
                 patDirs = null;
                 strDirs = null;
@@ -256,11 +252,11 @@ public final class SelectorUtils {
 
         // up to last '**'
         while (patIdxStart <= patIdxEnd && strIdxStart <= strIdxEnd) {
-            String patDir = (String) patDirs.get(patIdxEnd);
+            String patDir = patDirs.get(patIdxEnd);
             if (patDir.equals("**")) {
                 break;
             }
-            if (!match(patDir, (String) strDirs.get(strIdxEnd),
+            if (!match(patDir, strDirs.get(strIdxEnd),
                     isCaseSensitive)) {
                 patDirs = null;
                 strDirs = null;
@@ -302,8 +298,8 @@ public final class SelectorUtils {
             strLoop:
             for (int i = 0; i <= strLength - patLength; i++) {
                 for (int j = 0; j < patLength; j++) {
-                    String subPat = (String) patDirs.get(patIdxStart + j + 1);
-                    String subStr = (String) strDirs.get(strIdxStart + i + j);
+                    String subPat = patDirs.get(patIdxStart + j + 1);
+                    String subStr = strDirs.get(strIdxStart + i + j);
                     if (!match(subPat, subStr, isCaseSensitive)) {
                         continue strLoop;
                     }
@@ -500,10 +496,8 @@ public final class SelectorUtils {
         }
         if (!isCaseSensitive) {
             // NOTE: Try both upper case and lower case as done by String.equalsIgnoreCase()
-            if (Character.toUpperCase(c1) == Character.toUpperCase(c2) ||
-                    Character.toLowerCase(c1) == Character.toLowerCase(c2)) {
-                return true;
-            }
+            return Character.toUpperCase(c1) == Character.toUpperCase(c2) ||
+                    Character.toLowerCase(c1) == Character.toLowerCase(c2);
         }
         return false;
     }
@@ -587,10 +581,7 @@ public final class SelectorUtils {
         if (!target.exists()) {
             return true;
         }
-        if ((src.lastModified() - granularity) > target.lastModified()) {
-            return true;
-        }
-        return false;
+        return (src.lastModified() - granularity) > target.lastModified();
     }
 
     /**

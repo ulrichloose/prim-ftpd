@@ -44,7 +44,7 @@ import java.util.Set;
  */
 public class BasicMDCAdapter implements MDCAdapter {
 
-  private InheritableThreadLocal inheritableThreadLocal = new InheritableThreadLocal();
+  private final InheritableThreadLocal inheritableThreadLocal = new InheritableThreadLocal();
 
   /**
    * Put a context value (the <code>val</code> parameter) as identified with

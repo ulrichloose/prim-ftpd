@@ -244,7 +244,7 @@ public class DefaultFtpHandler implements FtpHandler {
             }
 
             if (ex instanceof java.io.IOException) {
-                throw (IOException) ex;
+                throw ex;
             } else {
                 LOG.warn("RequestHandler.service()", ex);
             }

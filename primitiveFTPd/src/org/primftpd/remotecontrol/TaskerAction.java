@@ -13,7 +13,7 @@ public enum TaskerAction {
     final private int stringId;
     final private String blurb;
 
-    private TaskerAction(int stringId, String blurb) {
+    TaskerAction(int stringId, String blurb) {
         this.stringId = stringId;
         this.blurb = blurb;
     }
@@ -26,7 +26,7 @@ public enum TaskerAction {
         return blurb;
     }
 
-    private static Map<String, TaskerAction> BLURB_TO_ACTION;
+    private static final Map<String, TaskerAction> BLURB_TO_ACTION;
     static {
         BLURB_TO_ACTION = new HashMap<>();
         for (TaskerAction action : values()) {

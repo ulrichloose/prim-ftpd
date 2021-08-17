@@ -54,15 +54,15 @@ public class NativeFileSystemView implements FileSystemView {
     private final Logger LOG = LoggerFactory.getLogger(NativeFileSystemView.class);
 
 
-    private Map<String, String> roots;
+    private final Map<String, String> roots;
 
     // the first and the last character will always be '/'
     // It is always with respect to one of the roots.
-    private String current;
+    private final String current;
 
-    private String userName;
+    private final String userName;
 
-    private char separator;
+    private final char separator;
 
     private boolean caseInsensitive = false;
 

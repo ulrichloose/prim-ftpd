@@ -31,9 +31,9 @@ import org.apache.ftpserver.ftplet.AuthorizationRequest;
  */
 public class TransferRatePermission implements Authority {
 
-    private int maxDownloadRate;
+    private final int maxDownloadRate;
 
-    private int maxUploadRate;
+    private final int maxUploadRate;
 
     public TransferRatePermission(int maxDownloadRate, int maxUploadRate) {
         this.maxDownloadRate = maxDownloadRate;

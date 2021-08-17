@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 /**
  * An interface for the methods required to handle backend-specific stuff.
  */
+@SuppressWarnings("ALL")
 public interface LogicHandler<T> {
 
     int VIEWTYPE_HEADER = 0;

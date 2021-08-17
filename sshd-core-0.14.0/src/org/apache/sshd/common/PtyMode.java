@@ -50,9 +50,9 @@ public enum PtyMode {
     // Speeed
     TTY_OP_ISPEED(128), TTY_OP_OSPEED(129);
 
-    private int v;
+    private final int v;
 
-    private PtyMode(int v) {
+    PtyMode(int v) {
         this.v = v;
     }
 

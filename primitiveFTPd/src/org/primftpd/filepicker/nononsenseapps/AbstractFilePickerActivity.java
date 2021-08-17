@@ -1,11 +1,9 @@
 package org.primftpd.filepicker.nononsenseapps;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -123,7 +121,7 @@ public abstract class AbstractFilePickerActivity<T> extends AppCompatActivity
         finish();
     }
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+   
     @Override
     public void onFilesPicked(@NonNull final List<Uri> files) {
         Intent i = new Intent();

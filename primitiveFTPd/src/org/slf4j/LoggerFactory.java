@@ -201,7 +201,7 @@ public final class LoggerFactory {
 
   // We need to use the name of the StaticLoggerBinder class, we can't reference
   // the class itseld.
-  private static String STATIC_LOGGER_BINDER_PATH = "org/slf4j/impl/StaticLoggerBinder.class";
+  private static final String STATIC_LOGGER_BINDER_PATH = "org/slf4j/impl/StaticLoggerBinder.class";
 
   private static void singleImplementationSanityCheck() {
     try {

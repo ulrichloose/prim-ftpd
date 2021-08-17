@@ -39,11 +39,11 @@ public class ScpCommandFactory implements CommandFactory {
 	 */
     public static final String SCP_COMMAND_PREFIX = "scp";
 
-    private CommandFactory delegate;
-    private ExecutorService executors;
-    private boolean shutdownExecutor;
-    private int sendBufferSize;
-    private int receiveBufferSize;
+    private final CommandFactory delegate;
+    private final ExecutorService executors;
+    private final boolean shutdownExecutor;
+    private final int sendBufferSize;
+    private final int receiveBufferSize;
 
     /**
      * Default constructor - uses an ad-hoc {@link ExecutorService} with

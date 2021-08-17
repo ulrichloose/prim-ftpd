@@ -99,7 +99,7 @@ public class UserAuthKeyboardInteractive implements UserAuth {
             String name = buffer.getString();
             String instruction = buffer.getString();
             String language_tag = buffer.getString();
-            log.info("Received {} {} {}", new Object[]{name, instruction, language_tag});
+            log.info("Received {} {} {}", name, instruction, language_tag);
             int num = buffer.getInt();
             String[] prompt = new String[num];
             boolean[] echo = new boolean[num];

@@ -35,7 +35,7 @@ import org.apache.ftpserver.util.EncryptUtils;
  */
 public class SaltedPasswordEncryptor implements PasswordEncryptor {
 
-    private SecureRandom rnd = new SecureRandom();
+    private final SecureRandom rnd = new SecureRandom();
 
     private static final int MAX_SEED = 99999999;
     private static final int HASH_ITERATIONS = 1000;

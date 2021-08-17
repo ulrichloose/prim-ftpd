@@ -153,9 +153,9 @@ public class BasicMarker implements Marker {
     return false;
   }
 
-  private static String OPEN = "[ ";
-  private static String CLOSE = " ]";
-  private static String SEP = ", ";
+  private static final String OPEN = "[ ";
+  private static final String CLOSE = " ]";
+  private static final String SEP = ", ";
 
 
   public boolean equals(Object obj) {

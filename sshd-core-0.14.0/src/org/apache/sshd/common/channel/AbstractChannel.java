@@ -51,7 +51,7 @@ public abstract class AbstractChannel extends CloseableUtils.AbstractInnerClosea
 
     public static final long DEFAULT_CHANNEL_CLOSE_TIMEOUT = 5000;
 
-    protected static enum GracefulState {
+    protected enum GracefulState {
         Opened, CloseSent, CloseReceived, Closed
     }
 

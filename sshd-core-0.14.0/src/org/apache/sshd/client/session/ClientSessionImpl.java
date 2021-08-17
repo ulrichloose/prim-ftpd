@@ -73,7 +73,7 @@ public class ClientSessionImpl extends AbstractSession implements ClientSession 
     /**
      * For clients to store their own metadata
      */
-    private Map<Object, Object> metadataMap = new HashMap<Object, Object>();
+    private final Map<Object, Object> metadataMap = new HashMap<Object, Object>();
 
     // TODO: clean service support a bit
     private boolean initialServiceRequestSent;

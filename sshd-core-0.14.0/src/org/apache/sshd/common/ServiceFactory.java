@@ -34,7 +34,7 @@ public interface ServiceFactory {
     /**
      * Utility class to help using NamedFactories
      */
-    public static class Utils {
+    class Utils {
 
         /**
          * Create an instance of the specified name by looking up the needed factory

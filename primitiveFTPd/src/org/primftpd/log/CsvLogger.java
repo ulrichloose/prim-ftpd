@@ -273,7 +273,7 @@ public class CsvLogger extends MarkerIgnoringBase
 		return MessageFormatter.arrayFormat(format, args).getMessage();
 	}
 
-	private static enum LogLevel {
+	private enum LogLevel {
 		TRACE,
 		DEBUG,
 		INFO,

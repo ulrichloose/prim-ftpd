@@ -3,7 +3,7 @@ package org.primftpd.events;
 public class DataTransferredEvent {
     private final long timestamp;
     private final long bytes;
-    private boolean isWrite;
+    private final boolean isWrite;
 
     public DataTransferredEvent(long timestamp, long bytes, boolean isWrite) {
         this.timestamp = timestamp;

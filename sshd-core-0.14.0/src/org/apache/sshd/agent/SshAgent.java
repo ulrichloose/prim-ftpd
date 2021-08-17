@@ -28,9 +28,9 @@ import java.util.List;
  */
 public interface SshAgent {
 
-    public static final String SSH_AUTHSOCKET_ENV_NAME = "SSH_AUTH_SOCK";
+    String SSH_AUTHSOCKET_ENV_NAME = "SSH_AUTH_SOCK";
 
-    public static class Pair<U,V> {
+    class Pair<U,V> {
         private final U first;
         private final V second;
 

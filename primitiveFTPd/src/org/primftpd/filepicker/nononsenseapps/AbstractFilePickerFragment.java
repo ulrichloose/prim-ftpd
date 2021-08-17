@@ -158,12 +158,12 @@ public abstract class AbstractFilePickerFragment<T> extends Fragment
                              Bundle savedInstanceState) {
         final View view = inflateRootView(inflater, container);
 
-        Toolbar toolbar = (Toolbar) view.findViewById(R.id.filepicker_toolbar);
+        Toolbar toolbar = view.findViewById(R.id.filepicker_toolbar);
         if (toolbar != null) {
             setupToolbar(toolbar);
         }
 
-        recyclerView = (RecyclerView) view.findViewById(android.R.id.list);
+        recyclerView = view.findViewById(android.R.id.list);
         // improve performance if you know that changes in content
         // do not change the size of the RecyclerView
         recyclerView.setHasFixedSize(true);
@@ -201,7 +201,7 @@ public abstract class AbstractFilePickerFragment<T> extends Fragment
         mNewFileButtonContainer = view.findViewById(R.id.filepicker_newfile_button_container);
         mRegularButtonContainer = view.findViewById(R.id.filepicker_button_container);
 
-        mEditTextFileName = (EditText) view.findViewById(R.id.filepicker_text_filename);
+        mEditTextFileName = view.findViewById(R.id.filepicker_text_filename);
         mEditTextFileName.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -220,7 +220,7 @@ public abstract class AbstractFilePickerFragment<T> extends Fragment
             }
         });
 
-        mCurrentDirView = (TextView) view.findViewById(R.id.filepicker_current_dir);
+        mCurrentDirView = view.findViewById(R.id.filepicker_current_dir);
         // Restore state
         if (mCurrentPath != null && mCurrentDirView != null) {
             mCurrentDirView.setText(getFullPath(mCurrentPath));
@@ -302,7 +302,6 @@ public abstract class AbstractFilePickerFragment<T> extends Fragment
         } else if (allowMultiple) {
             mListener.onFilesPicked(toUri(mCheckedItems));
         } else if (mode == MODE_FILE) {
-            //noinspection ConstantConditions
             mListener.onFilePicked(toUri(getFirstCheckedItem()));
         } else if (mode == MODE_DIR) {
             mListener.onFilePicked(toUri(mCurrentPath));
@@ -339,7 +338,6 @@ public abstract class AbstractFilePickerFragment<T> extends Fragment
     public
     @Nullable
     T getFirstCheckedItem() {
-        //noinspection LoopStatementThatDoesntLoop
         for (T file : mCheckedItems) {
             return file;
         }
@@ -832,7 +830,7 @@ public abstract class AbstractFilePickerFragment<T> extends Fragment
         public HeaderViewHolder(View v) {
             super(v);
             v.setOnClickListener(this);
-            text = (TextView) v.findViewById(android.R.id.text1);
+            text = v.findViewById(android.R.id.text1);
         }
 
         /**
@@ -858,7 +856,7 @@ public abstract class AbstractFilePickerFragment<T> extends Fragment
             v.setOnClickListener(this);
             v.setOnLongClickListener(this);
             icon = v.findViewById(R.id.filepicker_item_icon);
-            text = (TextView) v.findViewById(android.R.id.text1);
+            text = v.findViewById(android.R.id.text1);
         }
 
         /**
@@ -891,7 +889,7 @@ public abstract class AbstractFilePickerFragment<T> extends Fragment
             super(v);
             boolean nf = mode == MODE_NEW_FILE;
 
-            checkbox = (CheckBox) v.findViewById(R.id.filepicker_checkbox);
+            checkbox = v.findViewById(R.id.filepicker_checkbox);
             checkbox.setVisibility((nf || singleClick) ? View.GONE : View.VISIBLE);
             checkbox.setOnClickListener(new View.OnClickListener() {
                 @Override

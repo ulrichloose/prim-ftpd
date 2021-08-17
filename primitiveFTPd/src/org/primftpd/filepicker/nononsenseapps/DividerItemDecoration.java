@@ -10,7 +10,7 @@ import android.view.View;
  * Basic ItemDecoration which loads a drawable as a divider.
  */
 public class DividerItemDecoration extends RecyclerView.ItemDecoration {
-    private Drawable mDivider;
+    private final Drawable mDivider;
 
     public DividerItemDecoration(Drawable divider) {
         mDivider = divider;

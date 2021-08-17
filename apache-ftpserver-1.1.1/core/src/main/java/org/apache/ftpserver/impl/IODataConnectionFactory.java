@@ -51,7 +51,7 @@ public class IODataConnectionFactory implements ServerDataConnectionFactory {
     private final Logger LOG = LoggerFactory
             .getLogger(IODataConnectionFactory.class);
 
-    private FtpServerContext serverContext;
+    private final FtpServerContext serverContext;
 
     private Socket dataSoc;
 
@@ -464,11 +464,7 @@ public class IODataConnectionFactory implements ServerDataConnectionFactory {
         }
 
         // idle time is within limit - not a timeout
-        if ((currTime - requestTime) < maxIdleTime) {
-            return false;
-        }
-
-        return true;
+        return (currTime - requestTime) >= maxIdleTime;
     }
 
     /**

@@ -67,7 +67,7 @@ public class BaseMac implements Mac {
         update(tmp, 0, 4);
     }
 
-    public void update(byte foo[], int s, int l) {
+    public void update(byte[] foo, int s, int l) {
         mac.update(foo, s, l);
     }
 

@@ -250,7 +250,7 @@ public class SttySupport {
 
         p.waitFor();
 
-        String result = new String(bout.toByteArray());
+        String result = bout.toString();
 
         return result;
     }

@@ -196,7 +196,7 @@ public class ProcessShellFactory implements Factory<Command> {
         }
 
         protected class TtyFilterOutputStream extends FilterOutputStream {
-            private TtyFilterInputStream echo;
+            private final TtyFilterInputStream echo;
             public TtyFilterOutputStream(OutputStream out, TtyFilterInputStream echo) {
                 super(out);
                 this.echo = echo;

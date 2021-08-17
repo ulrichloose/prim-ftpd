@@ -69,7 +69,7 @@ public class NioListener extends AbstractListener {
 
     boolean suspended = false;
 
-    private FtpHandler handler = new DefaultFtpHandler();
+    private final FtpHandler handler = new DefaultFtpHandler();
 
     private FtpServerContext context;
 

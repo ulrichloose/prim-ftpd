@@ -36,7 +36,7 @@ import org.slf4j.LoggerFactory;
  */
 public class DataConnectionConfigurationFactory {
 
-    private Logger log = LoggerFactory.getLogger(DataConnectionConfigurationFactory.class);
+    private final Logger log = LoggerFactory.getLogger(DataConnectionConfigurationFactory.class);
     
     // maximum idle time in seconds
     private int idleTime = 300;

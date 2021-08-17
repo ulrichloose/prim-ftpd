@@ -30,7 +30,7 @@ import org.apache.ftpserver.ftplet.AuthorizationRequest;
  */
 public class WriteRequest implements AuthorizationRequest {
 
-    private String file;
+    private final String file;
 
     /**
      * Request write access to the user home directory (/)

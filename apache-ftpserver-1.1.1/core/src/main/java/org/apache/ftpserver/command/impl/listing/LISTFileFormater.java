@@ -88,7 +88,7 @@ public class LISTFileFormater implements FileFormater {
      * Get permission string.
      */
     private char[] getPermission(FtpFile file) {
-        char permission[] = new char[10];
+        char[] permission = new char[10];
         Arrays.fill(permission, '-');
 
         permission[0] = file.isDirectory() ? 'd' : '-';

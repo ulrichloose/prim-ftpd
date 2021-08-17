@@ -44,8 +44,8 @@ public class ECDH extends AbstractDH {
     private ECPoint e;
     private byte[] e_array;
     private ECPoint f;
-    private KeyPairGenerator myKpairGen;
-    private KeyAgreement myKeyAgree;
+    private final KeyPairGenerator myKpairGen;
+    private final KeyAgreement myKeyAgree;
 
     public ECDH() throws Exception {
         myKpairGen = SecurityUtils.getKeyPairGenerator("EC");

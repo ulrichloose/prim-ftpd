@@ -49,7 +49,7 @@ public enum ServerToStart
 	};
 
 	private final String xmlValue;
-	private ServerToStart(String xmlValue) {
+	ServerToStart(String xmlValue) {
 		this.xmlValue = xmlValue;
 	}
 	public String xmlValue() {

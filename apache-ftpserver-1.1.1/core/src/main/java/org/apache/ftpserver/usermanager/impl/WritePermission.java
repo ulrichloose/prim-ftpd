@@ -31,7 +31,7 @@ import org.apache.ftpserver.ftplet.AuthorizationRequest;
  */
 public class WritePermission implements Authority {
 
-    private String permissionRoot;
+    private final String permissionRoot;
 
     /**
      * Construct a write permission for the user home directory (/)

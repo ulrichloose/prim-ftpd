@@ -68,7 +68,7 @@ public class BaseProperties extends Properties {
             throw new FtpException(str + " not found");
         }
 
-        return prop.toLowerCase().equals("true");
+        return prop.equalsIgnoreCase("true");
     }
 
     public boolean getBoolean(final String str, final boolean bol) {

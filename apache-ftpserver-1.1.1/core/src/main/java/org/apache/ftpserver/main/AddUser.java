@@ -56,7 +56,7 @@ public class AddUser extends CommandLine {
      *            The first element of this array must specify the kind of
      *            configuration to be used to start the server.
      */
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         AddUser addUser = new AddUser();
         
         try {
@@ -175,7 +175,7 @@ public class AddUser extends CommandLine {
         System.err.println("Usage: java " + AddUser.class.getName() + " [OPTION] [CONFIGFILE]");
         System.err
                 .println("Starts the user management application, asking for user settings");
-        System.err.println("");
+        System.err.println();
         System.err
                 .println("      --default              use the default configuration, ");
         System.err

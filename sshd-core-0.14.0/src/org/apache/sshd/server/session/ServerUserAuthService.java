@@ -57,8 +57,8 @@ public class ServerUserAuthService extends CloseableUtils.AbstractCloseable impl
     }
 
     private final ServerSession session;
-    private List<NamedFactory<UserAuth>> userAuthFactories;
-    private List<List<String>> authMethods;
+    private final List<NamedFactory<UserAuth>> userAuthFactories;
+    private final List<List<String>> authMethods;
     private String authUserName;
     private String authMethod;
     private String authService;

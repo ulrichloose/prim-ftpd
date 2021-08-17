@@ -43,7 +43,7 @@ public class PtyCapableChannelSession extends ChannelSession {
     private int ptyWidth;
     private int ptyHeight;
     private Map<PtyMode, Integer> ptyModes;
-    private Map<String, String> env = new LinkedHashMap<String, String>();
+    private final Map<String, String> env = new LinkedHashMap<String, String>();
 
     public PtyCapableChannelSession(boolean usePty) {
         this.usePty = usePty;

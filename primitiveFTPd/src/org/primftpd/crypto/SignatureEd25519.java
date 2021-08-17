@@ -35,7 +35,7 @@ public class SignatureEd25519 extends AbstractSignature {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
-    private Signer signer = new Ed25519Signer();
+    private final Signer signer = new Ed25519Signer();
 
     private Ed25519PublicKeyParameters extractPubKeyParas(PublicKey pubkey)
             throws NoSuchFieldException, IllegalAccessException {

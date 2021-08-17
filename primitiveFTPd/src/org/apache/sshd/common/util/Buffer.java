@@ -52,6 +52,7 @@ import java.security.spec.RSAPublicKeySpec;
  *
  * @author <a href="mailto:dev@mina.apache.org">Apache MINA SSHD Project</a>
  */
+@SuppressWarnings("ALL")
 public final class Buffer implements Readable {
 
     public static final int DEFAULT_SIZE = 256;

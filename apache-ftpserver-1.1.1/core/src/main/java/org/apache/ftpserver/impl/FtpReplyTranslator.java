@@ -150,7 +150,7 @@ public class FtpReplyTranslator {
 		}
 
 		StringBuilder sb = new StringBuilder(128);
-		sb.append(str.substring(startIndex, openIndex));
+		sb.append(str, startIndex, openIndex);
 		while (true) {
 			String varName = str.substring(openIndex + 1, closeIndex);
 			sb.append(getVariableValue(session, request, context, code,
@@ -168,7 +168,7 @@ public class FtpReplyTranslator {
 				sb.append(str.substring(startIndex));
 				break;
 			}
-			sb.append(str.substring(startIndex, openIndex));
+			sb.append(str, startIndex, openIndex);
 		}
 		return sb.toString();
 	}

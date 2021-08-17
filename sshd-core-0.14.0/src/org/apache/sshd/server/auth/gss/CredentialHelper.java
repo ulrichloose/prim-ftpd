@@ -46,7 +46,7 @@ public class CredentialHelper {
         lc.login();
 
         try {
-            return (GSSCredential) Subject.doAs(lc.getSubject(), new G(mgr));
+            return Subject.doAs(lc.getSubject(), new G(mgr));
         } catch (PrivilegedActionException e) {
             throw (GSSException) e.getCause();
         }
@@ -60,7 +60,7 @@ public class CredentialHelper {
 
     private static class FixedLoginConfiguration extends Configuration {
 
-        private AppConfigurationEntry entry;
+        private final AppConfigurationEntry entry;
 
         /**
          * Constructor.
@@ -106,7 +106,7 @@ public class CredentialHelper {
 
     private static final class G implements PrivilegedExceptionAction<GSSCredential> {
 
-        private GSSManager mgr;
+        private final GSSManager mgr;
 
         /**
          * @param mgr The existing GSS manager

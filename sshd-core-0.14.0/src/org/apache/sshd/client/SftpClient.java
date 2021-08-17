@@ -68,14 +68,14 @@ public interface SftpClient {
         AcModTime
     }
 
-    public static class Handle {
+    class Handle {
         public final String id;
         public Handle(String id) {
             this.id = id;
         }
     }
 
-    public static class Attributes {
+    class Attributes {
         public EnumSet<Attribute> flags = EnumSet.noneOf(Attribute.class);
         public long size;
         public int uid;
@@ -119,7 +119,7 @@ public interface SftpClient {
         }
     }
 
-    public static class DirEntry {
+    class DirEntry {
         public String filename;
         public String longFilename;
         public Attributes attributes;

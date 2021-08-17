@@ -29,7 +29,7 @@ package org.apache.ftpserver.util;
  */
 public class RegularExpr {
 
-    private char[] pattern;
+    private final char[] pattern;
 
     /**
      * Constructor.

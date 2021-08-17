@@ -49,7 +49,7 @@ public class CompressionZlib implements Compression {
 
     static private final int BUF_SIZE = 4096;
 
-    private byte[] tmpbuf = new byte[BUF_SIZE];
+    private final byte[] tmpbuf = new byte[BUF_SIZE];
     private Deflater compresser;
     private Inflater decompresser;
 

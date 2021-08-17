@@ -23,9 +23,9 @@ public abstract class SafFile<T> extends AbstractFile {
     private final ContentResolver contentResolver;
 
     private DocumentFile documentFile;
-    private DocumentFile parentDocumentFile;
+    private final DocumentFile parentDocumentFile;
 
-    private boolean writable;
+    private final boolean writable;
 
     public SafFile(
             ContentResolver contentResolver,

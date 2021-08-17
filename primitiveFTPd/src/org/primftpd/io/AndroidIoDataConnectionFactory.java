@@ -25,7 +25,7 @@ public class AndroidIoDataConnectionFactory extends IODataConnectionFactory impl
     private final Logger LOG = LoggerFactory
             .getLogger(IODataConnectionFactory.class);
 
-    private FtpServerContext serverContext;
+    private final FtpServerContext serverContext;
 
     private InetAddress address;
 
@@ -35,13 +35,13 @@ public class AndroidIoDataConnectionFactory extends IODataConnectionFactory impl
 
     private boolean passive = false;
 
-    private boolean secure = false;
+    private final boolean secure = false;
 
     private boolean isZip = false;
 
     private InetAddress serverControlAddress;
 
-    private FtpIoSession session;
+    private final FtpIoSession session;
 
     private ServerSocketChannel serverSocketChannel;
     private SocketChannel dataSocketChannel;
@@ -164,11 +164,7 @@ public class AndroidIoDataConnectionFactory extends IODataConnectionFactory impl
         }
 
         // idle time is within limit - not a timeout
-        if ((currTime - requestTime) < maxIdleTime) {
-            return false;
-        }
-
-        return true;
+        return (currTime - requestTime) >= maxIdleTime;
     }
 
     @Override

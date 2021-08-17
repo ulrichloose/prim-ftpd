@@ -7,7 +7,6 @@ import android.util.AttributeSet;
 import android.widget.Toast;
 
 import org.primftpd.R;
-import org.slf4j.LoggerFactory;
 
 public class FtpPassivePortsEditTextPreference extends EditTextPreference implements Preference.OnPreferenceChangeListener
 {

@@ -55,7 +55,7 @@ public class InvertedShellWrapper implements Command, SessionAware {
     private InputStream shellOut;
     private InputStream shellErr;
     private ExitCallback callback;
-    private boolean shutdownExecutor;
+    private final boolean shutdownExecutor;
 
     public InvertedShellWrapper(InvertedShell shell) {
         this(shell, DEFAULT_BUFFER_SIZE);

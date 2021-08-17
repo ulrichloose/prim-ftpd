@@ -65,8 +65,7 @@ public class SshdSocketAddress extends SocketAddress {
         if (o == null || getClass() != o.getClass()) return false;
         SshdSocketAddress that = (SshdSocketAddress) o;
         if (port != that.port) return false;
-        if (!hostName.equals(that.hostName)) return false;
-        return true;
+        return hostName.equals(that.hostName);
     }
 
     @Override

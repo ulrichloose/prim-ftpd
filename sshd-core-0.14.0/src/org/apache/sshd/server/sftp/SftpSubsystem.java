@@ -209,11 +209,11 @@ public class SftpSubsystem implements Command, Runnable, SessionAware, FileSyste
     private ServerSession session;
     private boolean closed = false;
 	private ExecutorService executors;
-	private boolean shutdownExecutor;
+	private final boolean shutdownExecutor;
 	private Future<?> pendingFuture;
     private FileSystemView root;
     private int version;
-    private Map<String, Handle> handles = new HashMap<String, Handle>();
+    private final Map<String, Handle> handles = new HashMap<String, Handle>();
 
     protected static abstract class Handle {
         SshFile file;
@@ -495,7 +495,7 @@ public class SftpSubsystem implements Command, Runnable, SessionAware, FileSyste
                 String path = buffer.getString();
                 int pflags = buffer.getInt();
                 Map<SshFile.Attribute, Object> attrs = readAttrs(buffer);
-                log.debug("Received SSH_FXP_OPEN (path={}, pflags={}, attrs={})", new Object[] { path, pflags, attrs });
+                log.debug("Received SSH_FXP_OPEN (path={}, pflags={}, attrs={})", path, pflags, attrs);
                 try {
                     SshFile file = resolveFile(path);
                     if (file.doesExist()) {
@@ -565,7 +565,7 @@ public class SftpSubsystem implements Command, Runnable, SessionAware, FileSyste
                 String handle = buffer.getString();
                 long offset = buffer.getLong();
                 int len = buffer.getInt();
-                log.debug("Received SSH_FXP_READ (handle={}, offset={}, length={})", new Object[] { handle, offset, len });
+                log.debug("Received SSH_FXP_READ (handle={}, offset={}, length={})", handle, offset, len);
                 try {
                     Handle p = handles.get(handle);
                     if (!(p instanceof FileHandle)) {
@@ -593,7 +593,7 @@ public class SftpSubsystem implements Command, Runnable, SessionAware, FileSyste
                 String handle = buffer.getString();
                 long offset = buffer.getLong();
                 byte[] data = buffer.getBytes();
-                log.debug("Received SSH_FXP_WRITE (handle={}, offset={}, data=byte[{}])", new Object[] { handle, offset, data.length });
+                log.debug("Received SSH_FXP_WRITE (handle={}, offset={}, data=byte[{}])", handle, offset, data.length);
                 try {
                     Handle p = handles.get(handle);
                     if (!(p instanceof FileHandle)) {

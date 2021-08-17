@@ -6,7 +6,6 @@ import org.apache.ftpserver.ftplet.FtpSession;
 import org.apache.ftpserver.impl.DefaultFtpSession;
 import org.apache.ftpserver.impl.FtpIoSession;
 import org.apache.ftpserver.impl.ServerDataConnectionFactory;
-import org.greenrobot.eventbus.EventBus;
 import org.primftpd.events.DataTransferredEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +17,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.ReadableByteChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.channels.WritableByteChannel;
+import java.nio.charset.StandardCharsets;
 
 public class AndroidIoDataConnection implements DataConnection {
 
@@ -25,7 +25,7 @@ public class AndroidIoDataConnection implements DataConnection {
 
     private final FtpIoSession session;
     private final ServerDataConnectionFactory factory;
-    private SocketChannel dataSocketChannel;
+    private final SocketChannel dataSocketChannel;
 
     public AndroidIoDataConnection(final SocketChannel dataSocketChannel, final FtpIoSession session,
                             final ServerDataConnectionFactory factory) {
@@ -71,11 +71,7 @@ public class AndroidIoDataConnection implements DataConnection {
             }
         };
 
-        try {
-            return transfer(session, true, dataSocketChannel, outStreamBacked);
-        } finally {
-            //IoUtils.close(out);
-        }
+        return transfer(session, true, dataSocketChannel, outStreamBacked);
     }
 
     /*
@@ -119,11 +115,7 @@ public class AndroidIoDataConnection implements DataConnection {
             }
         };
 
-        try {
-            return transfer(session, true, inStreamBacked, dataSocketChannel);
-        } finally {
-            //IoUtils.close(out);
-        }
+        return transfer(session, true, inStreamBacked, dataSocketChannel);
     }
 
     /*
@@ -137,23 +129,16 @@ public class AndroidIoDataConnection implements DataConnection {
             throws IOException {
         LOG.trace("transferToClient()");
         //Writer writer = null;
-        try {
-            //writer = new OutputStreamWriter(out, "UTF-8");
-            //writer.write(str);
-            byte[] bytes = str.getBytes("UTF-8");
-            ByteBuffer buffer = ByteBuffer.wrap(bytes);
-            dataSocketChannel.write(buffer);
+        //writer = new OutputStreamWriter(out, "UTF-8");
+        //writer.write(str);
+        byte[] bytes = str.getBytes(StandardCharsets.UTF_8);
+        ByteBuffer buffer = ByteBuffer.wrap(bytes);
+        dataSocketChannel.write(buffer);
 
-            // update session
-            if (session instanceof DefaultFtpSession) {
-                ((DefaultFtpSession) session).increaseWrittenDataBytes(str
-                        .getBytes("UTF-8").length);
-            }
-        } finally {
-//            if (writer != null) {
-//                writer.flush();
-//            }
-//            IoUtils.close(writer);
+        // update session
+        if (session instanceof DefaultFtpSession) {
+            ((DefaultFtpSession) session).increaseWrittenDataBytes(str
+                    .getBytes(StandardCharsets.UTF_8).length);
         }
 
     }
@@ -235,10 +220,6 @@ public class AndroidIoDataConnection implements DataConnection {
             LOG.warn("Exception during data transfer, closing data connection socket", e);
             factory.closeDataConnection();
             throw e;
-        } finally {
-//            if (out != null) {
-//                out.flush();
-//            }
         }
 
         return transferredSize;

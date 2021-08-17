@@ -37,7 +37,7 @@ public class AgentServerProxy implements SshAgentServer {
     private static final Logger LOG = LoggerFactory.getLogger(AgentServerProxy.class);
 
     private final ConnectionService service;
-    private String id;
+    private final String id;
 
     public AgentServerProxy(ConnectionService service) throws IOException {
         this.service = service;
@@ -59,7 +59,7 @@ public class AgentServerProxy implements SshAgentServer {
         } catch (IOException e) {
             throw e;
         } catch (Exception e) {
-            throw (IOException) new IOException().initCause(e);
+            throw (IOException) new IOException(e);
         }
     }
 

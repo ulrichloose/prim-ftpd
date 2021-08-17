@@ -31,7 +31,7 @@ import org.apache.sshd.common.util.SecurityUtils;
 public class BaseDigest implements Digest {
 
     private final String algorithm;
-    private int bsize;
+    private final int bsize;
     private MessageDigest md;
 
     /**

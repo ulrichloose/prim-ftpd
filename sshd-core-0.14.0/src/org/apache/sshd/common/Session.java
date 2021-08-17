@@ -226,27 +226,27 @@ public interface Session extends Closeable {
      *
      * @author <a href="mailto:dev@mina.apache.org">Apache MINA SSHD Project</a>
      */
-    public class AttributeKey<T> {
+    class AttributeKey<T> {
     }
 
-    public void resetIdleTimeout();
+    void resetIdleTimeout();
 
     /**
      * Check if timeout has occurred.
      * @return the timeout status, never <code>null</code>
      */
-    public TimeoutStatus getTimeoutStatus();
+    TimeoutStatus getTimeoutStatus();
 
     /**
      * What is timeout value in milliseconds for authentication stage
      * @return
      */
-    public long getAuthTimeout();
+    long getAuthTimeout();
 
     /**
      * What is timeout value in milliseconds for communication
      * @return
      */
 
-    public long getIdleTimeout();
+    long getIdleTimeout();
 }

@@ -30,7 +30,7 @@ public class TaskerEditConditionActivity extends ListActivity {
             data[i] = getText(conditions[i].getStringId()).toString();
         }
 
-        ListView listView = (ListView) findViewById(android.R.id.list);
+        ListView listView = findViewById(android.R.id.list);
         listView.setAdapter(new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_1,

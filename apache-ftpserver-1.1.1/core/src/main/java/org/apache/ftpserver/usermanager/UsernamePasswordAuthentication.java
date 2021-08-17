@@ -30,9 +30,9 @@ import org.apache.ftpserver.usermanager.impl.UserMetadata;
  */
 public class UsernamePasswordAuthentication implements Authentication {
 
-    private String username;
+    private final String username;
 
-    private String password;
+    private final String password;
 
     private UserMetadata userMetadata;
 

@@ -39,7 +39,7 @@ public class StringUtils {
         int sind = 0;
         int cind = 0;
         while ((cind = source.indexOf(oldStr, sind)) != -1) {
-            sb.append(source.substring(sind, cind));
+            sb.append(source, sind, cind);
             sb.append(newStr);
             sind = cind + oldStr.length();
         }
@@ -63,7 +63,7 @@ public class StringUtils {
         }
 
         StringBuilder sb = new StringBuilder();
-        sb.append(source.substring(startIndex, openIndex));
+        sb.append(source, startIndex, openIndex);
         while (true) {
             String intStr = source.substring(openIndex + 1, closeIndex);
             int index = Integer.parseInt(intStr);
@@ -81,7 +81,7 @@ public class StringUtils {
                 sb.append(source.substring(startIndex));
                 break;
             }
-            sb.append(source.substring(startIndex, openIndex));
+            sb.append(source, startIndex, openIndex);
         }
         return sb.toString();
     }
@@ -103,7 +103,7 @@ public class StringUtils {
         }
 
         StringBuilder sb = new StringBuilder();
-        sb.append(source.substring(startIndex, openIndex));
+        sb.append(source, startIndex, openIndex);
         while (true) {
             String key = source.substring(openIndex + 1, closeIndex);
             Object val = args.get(key);
@@ -123,7 +123,7 @@ public class StringUtils {
                 sb.append(source.substring(startIndex));
                 break;
             }
-            sb.append(source.substring(startIndex, openIndex));
+            sb.append(source, startIndex, openIndex);
         }
         return sb.toString();
     }
@@ -236,7 +236,7 @@ public class StringUtils {
      */
     public final static byte[] toByteArray(String hexString) {
         int arrLength = hexString.length() >> 1;
-        byte buff[] = new byte[arrLength];
+        byte[] buff = new byte[arrLength];
         for (int i = 0; i < arrLength; i++) {
             int index = i << 1;
             String digit = hexString.substring(index, index + 2);

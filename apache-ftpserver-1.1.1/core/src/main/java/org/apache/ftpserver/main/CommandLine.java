@@ -47,7 +47,7 @@ public class CommandLine {
      *            The first element of this array must specify the kind of
      *            configuration to be used to start the server.
      */
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         CommandLine cli = new CommandLine();
         try {
@@ -96,7 +96,7 @@ public class CommandLine {
         System.err
                 .println("Starts FtpServer using the default configuration of the ");
         System.err.println("configuration file if provided.");
-        System.err.println("");
+        System.err.println();
         System.err
                 .println("      --default              use the default configuration, ");
         System.err
