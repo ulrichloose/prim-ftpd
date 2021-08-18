@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import org.primftpd.util.ServicesStartStopUtil;
 
-class Toggle { static int running = 1;   }
+class Toggle { static boolean running = false;   }
 
 public class StartServerAndExitActivity extends Activity {
 
@@ -15,12 +15,12 @@ public class StartServerAndExitActivity extends Activity {
         super.onCreate(savedInstanceState);
         Context context = getApplicationContext();
         //ServicesStartStopUtil.startServers(context);
-        if (Toggle.running == 1) {
+        if (Toggle.running == false) {
             ServicesStartStopUtil.startServers(context);
-            Toggle.running = 0;
+            Toggle.running = true;
         } else {
             ServicesStartStopUtil.stopServers(context);
-            Toggle.running = 1;
+            Toggle.running = false;
         }
 
         // wait a short delay

@@ -32,8 +32,6 @@ import java.util.Enumeration;
 import java.util.List;
 
 import org.primftpd.log.PrimFtpdLoggerBinder;
-import org.slf4j.ILoggerFactory;
-import org.slf4j.Logger;
 import org.slf4j.helpers.NOPLoggerFactory;
 import org.slf4j.helpers.SubstituteLoggerFactory;
 import org.slf4j.helpers.Util;
@@ -207,16 +205,16 @@ public final class LoggerFactory {
     try {
       ClassLoader loggerFactoryClassLoader = LoggerFactory.class
           .getClassLoader();
-      Enumeration paths;
+      Enumeration<URL> paths;
       if (loggerFactoryClassLoader == null) {
         paths = ClassLoader.getSystemResources(STATIC_LOGGER_BINDER_PATH);
       } else {
         paths = loggerFactoryClassLoader
             .getResources(STATIC_LOGGER_BINDER_PATH);
       }
-      List implementationList = new ArrayList();
+      List<URL> implementationList = new ArrayList<URL>();
       while (paths.hasMoreElements()) {
-        URL path = (URL) paths.nextElement();
+        URL path = paths.nextElement();
         implementationList.add(path);
       }
       if (implementationList.size() > 1) {

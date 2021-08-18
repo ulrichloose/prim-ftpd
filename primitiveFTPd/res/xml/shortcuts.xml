@@ -16,7 +16,7 @@
     <shortcut
         android:shortcutId="StartServer"
         android:enabled="true"
-        android:icon="@mipmap/ic_start"
+        android:icon="@mipmap/ic_on_off"
         android:shortcutShortLabel="@string/toggleService"
         android:shortcutLongLabel="@string/toggleService">
         <intent
