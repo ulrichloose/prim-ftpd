@@ -17,23 +17,12 @@
         android:shortcutId="StartServer"
         android:enabled="true"
         android:icon="@mipmap/ic_start"
-        android:shortcutShortLabel="@string/startService"
-        android:shortcutLongLabel="@string/startService">
+        android:shortcutShortLabel="@string/toggleService"
+        android:shortcutLongLabel="@string/toggleService">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="org.primftpd"
             android:targetClass="org.primftpd.ui.StartServerAndExitActivity" />
     </shortcut>
 
-    <shortcut
-        android:shortcutId="StopServer"
-        android:enabled="true"
-        android:icon="@mipmap/ic_stop"
-        android:shortcutShortLabel="@string/stopService"
-        android:shortcutLongLabel="@string/stopService">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="org.primftpd"
-            android:targetClass="org.primftpd.ui.StopServerAndExitActivity" />
-    </shortcut>
 </shortcuts>

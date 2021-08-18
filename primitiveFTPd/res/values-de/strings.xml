@@ -22,7 +22,7 @@
     <string name="translate">Übersetzen</string>
     <string name="startService">Server starten</string>
     <string name="stopService">Server stoppen</string>
-    <string name="toggleService">Server zwischen Start/Stop umschalten</string>
+    <string name="toggleService">FTP on/off</string>
     <string name="notificationTitle">FTP-Server</string>
     <string name="haveToSetAuthMechanism">Sie müssen erst einen Authentifizierungs-Mechanismus festlegen</string>
     <string name="serverRunning">FTP-Server läuft</string>

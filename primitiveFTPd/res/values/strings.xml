@@ -24,7 +24,7 @@
 
     <string name="startService">Start Server</string>
     <string name="stopService">Stop Server</string>
-    <string name="toggleService">Toggle Server start/stop</string>
+    <string name="toggleService">FTP on/off</string>
     <string name="notificationTitle">FTP Server</string>
 
     <string name="haveToSetAuthMechanism">You have to set an authentication mechanism first</string>
