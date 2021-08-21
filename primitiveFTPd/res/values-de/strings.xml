@@ -132,6 +132,6 @@
     <string name="prefTheme">Design</string>
     <string name="prefTitlePubKeyAuth">Public Key Authentifizierung</string>
     <string name="isServerRunning">Läuft der Server\?</string>
-    <string name="widgetTextStop">Stop FTP off</string>
+    <string name="widgetTextStop">Stop FTP</string>
     <string name="widgetTextStart">Start FTP</string>
 </resources>

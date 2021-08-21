@@ -220,18 +220,16 @@ public class ServicesStartStopUtil {
  
             remoteViews.setImageViewResource(
                     R.id.widgetIcon,
-                    R.drawable.ic_stop_white_48dp_x);
+                    R.mipmap.ic_on);
             remoteViews.setTextViewText(
-                    R.id.widgetText,
-                    context.getText(R.string.widgetTextStop));
+                    R.id.widgetText, context.getText(R.string.widgetTextStop));
         } else {
 
             remoteViews.setImageViewResource(
                     R.id.widgetIcon,
-                    R.drawable.ic_play_white_48dp_x);
+                    R.mipmap.ic_off);
             remoteViews.setTextViewText(
-                    R.id.widgetText,
-                    context.getText(R.string.widgetTextStart));
+                    R.id.widgetText, context.getText(R.string.widgetTextStart));
         }
 
         ComponentName thisWidget = new ComponentName(context, StartStopWidgetProvider.class);

@@ -12,7 +12,7 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_play_white_48dp_x" />
+        android:src="@mipmap/ic_off" />
 
     <TextView
         android:id="@+id/widgetText"
