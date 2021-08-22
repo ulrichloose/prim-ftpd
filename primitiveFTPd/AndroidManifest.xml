@@ -238,16 +238,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name="org.primftpd.ui.StopServerAndExitActivity"
-            android:label="@string/stopService"
-            android:theme="@android:style/Theme.NoDisplay">
-            <intent-filter>
-                <!-- be invokable by other apps (e.g. Automate) but not listed in main menu -->
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-
         <service android:name="org.primftpd.services.FtpServerService" />
         <service android:name="org.primftpd.services.SshServerService" />
         <service

@@ -12,7 +12,8 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
-        android:src="@mipmap/ic_off" />
+        android:src="@mipmap/ic_off"
+        android:contentDescription="@string/initialView" />
 
     <TextView
         android:id="@+id/widgetText"

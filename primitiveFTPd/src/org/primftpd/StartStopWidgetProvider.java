@@ -12,16 +12,10 @@ import android.widget.RemoteViews;
 import org.primftpd.services.DownloadsService;
 import org.primftpd.util.ServersRunningBean;
 import org.primftpd.util.ServicesStartStopUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class StartStopWidgetProvider extends AppWidgetProvider
 {
 	public static final String WIDGET_TOUCH_ACTION = "org.primftpd.APPWIDGET_TOUCH";
-
-	protected Logger logger() {
-		return LoggerFactory.getLogger(getClass());
-	}
 
 	public static Intent buildServerStartStopIntent(Context context) {
 		Intent intent = new Intent(context, StartStopWidgetProvider.class);
@@ -32,18 +26,15 @@ public class StartStopWidgetProvider extends AppWidgetProvider
 	@Override
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
 		super.onUpdate(context, appWidgetManager, appWidgetIds);
-		Logger logger = logger();
-		logger.debug("onUpdate()");
 
 		for (int appWidgetId : appWidgetIds) {
 			Intent intent = buildServerStartStopIntent(context);
+
 			PendingIntent pendingIntent = PendingIntent.getBroadcast(
-					context, 0, intent, 0);
-			logger.debug("pendingIntent: {}", pendingIntent);
+					context,0, intent, PendingIntent.FLAG_IMMUTABLE);
 
 			RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget);
 			views.setOnClickPendingIntent(R.id.widgetIcon, pendingIntent);
-			views.setOnClickPendingIntent(R.id.widgetText, pendingIntent);
 			appWidgetManager.updateAppWidget(appWidgetId, views);
 		}
 	}
@@ -51,13 +42,11 @@ public class StartStopWidgetProvider extends AppWidgetProvider
 	@Override
 	public void onEnabled(Context context) {
 		super.onEnabled(context);
-		logger().debug("onEnabled()");
 	}
 
 	@Override
 	public void onDisabled(Context context) {
 		super.onDisabled(context);
-		logger().debug("onDisabled()");
 	}
 
 	@Override
@@ -82,7 +71,6 @@ public class StartStopWidgetProvider extends AppWidgetProvider
 	@Override
 	public void onDeleted(Context context, int[] appWidgetIds) {
 		super.onDeleted(context, appWidgetIds);
-		logger().debug("onDeleted()");
 	}
 
 	@Override
@@ -92,6 +80,5 @@ public class StartStopWidgetProvider extends AppWidgetProvider
 			int appWidgetId,
 			Bundle newOptions) {
 		super.onAppWidgetOptionsChanged(context, appWidgetManager, appWidgetId, newOptions);
-		logger().debug("onAppWidgetOptionsChanged()");
 	}
 }

@@ -5,6 +5,7 @@
     <string name="ifacesLabel">Network Interface</string>
     <string name="ipAddrLabel">IP Address</string>
     <string name="ifacesError">Error: </string>
+    <string name="initialView">ftp is off</string>
     <string name="protocolLabel">Protocol</string>
     <string name="portLabel">Port</string>
     <string name="fingerprintsLabel">Key Fingerprints</string>
