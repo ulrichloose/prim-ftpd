@@ -2,9 +2,9 @@ package org.primftpd;
 
 import android.content.Context;
 
-import org.primftpd.log.CsvLoggerFactory;
-
 import androidx.multidex.MultiDexApplication;
+
+import org.primftpd.log.CsvLoggerFactory;
 
 public class PftpdApp extends MultiDexApplication {
     @Override

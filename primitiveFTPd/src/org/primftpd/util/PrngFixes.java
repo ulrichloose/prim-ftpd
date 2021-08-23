@@ -9,6 +9,13 @@ package org.primftpd.util;
  * freely, as long as the origin is not misrepresented.
  */
 
+import android.os.Build;
+import android.os.Process;
+import android.util.Log;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -17,17 +24,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.security.Provider;
 import java.security.SecureRandomSpi;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import android.os.Build;
-import android.os.Process;
-import android.util.Log;
 
 /**
  * Fixes for the output of the default PRNG having low entropy.

@@ -1,18 +1,19 @@
 package org.primftpd.filepicker.nononsenseapps;
 
+import static org.primftpd.filepicker.nononsenseapps.AbstractFilePickerActivity.EXTRA_ALLOW_MULTIPLE;
+import static org.primftpd.filepicker.nononsenseapps.AbstractFilePickerActivity.EXTRA_PATHS;
+
 import android.content.Intent;
 import android.net.Uri;
+import android.text.TextUtils;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import android.text.TextUtils;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.primftpd.filepicker.nononsenseapps.AbstractFilePickerActivity.EXTRA_ALLOW_MULTIPLE;
-import static org.primftpd.filepicker.nononsenseapps.AbstractFilePickerActivity.EXTRA_PATHS;
 
 /**
  * Some utility methods

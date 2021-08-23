@@ -6,7 +6,6 @@ import org.apache.ftpserver.ftplet.FtpSession;
 import org.apache.ftpserver.impl.DefaultFtpSession;
 import org.apache.ftpserver.impl.FtpIoSession;
 import org.apache.ftpserver.impl.ServerDataConnectionFactory;
-import org.primftpd.events.DataTransferredEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

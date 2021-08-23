@@ -1,11 +1,12 @@
 package org.primftpd.filepicker.nononsenseapps;
 
 import android.net.Uri;
+import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.loader.content.Loader;
-import androidx.recyclerview.widget.SortedList;
 import androidx.recyclerview.widget.RecyclerView;
-import android.view.ViewGroup;
+import androidx.recyclerview.widget.SortedList;
 
 /**
  * An interface for the methods required to handle backend-specific stuff.

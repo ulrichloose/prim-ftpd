@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Environment;
 
-
 import org.primftpd.filepicker.ResettingFilePickerActivity;
 import org.primftpd.filepicker.nononsenseapps.FilePickerActivity;
 

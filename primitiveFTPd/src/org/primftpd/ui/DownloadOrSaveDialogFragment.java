@@ -6,14 +6,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
-import org.primftpd.R;
-import org.primftpd.share.ReceiveSaveAsActivity;
-import org.primftpd.services.DownloadsService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentActivity;
+
+import org.primftpd.R;
+import org.primftpd.services.DownloadsService;
+import org.primftpd.share.ReceiveSaveAsActivity;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class DownloadOrSaveDialogFragment extends DialogFragment {
     private final Logger logger = LoggerFactory.getLogger(getClass());

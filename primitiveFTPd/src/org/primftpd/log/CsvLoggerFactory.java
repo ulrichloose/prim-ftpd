@@ -1,10 +1,18 @@
 package org.primftpd.log;
 
+import android.content.Context;
+
+import org.primftpd.util.Defaults;
+import org.slf4j.ILoggerFactory;
+import org.slf4j.Logger;
+
 import java.io.File;
-import java.io.FilenameFilter;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FilenameFilter;
 import java.io.PrintStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
@@ -12,14 +20,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.SortedSet;
 import java.util.TreeSet;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-
-import org.primftpd.util.Defaults;
-import org.slf4j.ILoggerFactory;
-import org.slf4j.Logger;
-
-import android.content.Context;
 
 public class CsvLoggerFactory implements ILoggerFactory
 {

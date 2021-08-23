@@ -3,8 +3,8 @@ package org.primftpd.filesystem;
 import org.apache.sshd.common.Session;
 import org.apache.sshd.common.file.FileSystemView;
 import org.apache.sshd.common.file.SshFile;
-import org.primftpd.services.PftpdService;
 import org.primftpd.pojo.LsOutputBean;
+import org.primftpd.services.PftpdService;
 
 import java.io.File;
 

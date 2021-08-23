@@ -24,17 +24,17 @@
 
 package org.slf4j;
 
+import org.primftpd.log.PrimFtpdLoggerBinder;
+import org.slf4j.helpers.NOPLoggerFactory;
+import org.slf4j.helpers.SubstituteLoggerFactory;
+import org.slf4j.helpers.Util;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.List;
-
-import org.primftpd.log.PrimFtpdLoggerBinder;
-import org.slf4j.helpers.NOPLoggerFactory;
-import org.slf4j.helpers.SubstituteLoggerFactory;
-import org.slf4j.helpers.Util;
 
 /**
  * The <code>LoggerFactory</code> is a utility class producing Loggers for

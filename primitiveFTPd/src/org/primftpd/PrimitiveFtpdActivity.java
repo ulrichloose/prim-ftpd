@@ -31,10 +31,15 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.fragment.app.FragmentActivity;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 import org.primftpd.events.ClientActionEvent;
+import org.primftpd.events.ServerInfoRequestEvent;
+import org.primftpd.events.ServerInfoResponseEvent;
+import org.primftpd.events.ServerStateChangedEvent;
 import org.primftpd.log.PrimFtpdLoggerBinder;
 import org.primftpd.prefs.AboutActivity;
 import org.primftpd.prefs.FtpPrefsActivityThemeDark;
@@ -44,9 +49,6 @@ import org.primftpd.prefs.Logging;
 import org.primftpd.prefs.PrefsBean;
 import org.primftpd.prefs.StorageType;
 import org.primftpd.prefs.Theme;
-import org.primftpd.events.ServerInfoRequestEvent;
-import org.primftpd.events.ServerInfoResponseEvent;
-import org.primftpd.events.ServerStateChangedEvent;
 import org.primftpd.ui.CalcPubkeyFinterprintsTask;
 import org.primftpd.ui.ClientActionActivity;
 import org.primftpd.ui.GenKeysAskDialogFragment;
@@ -62,8 +64,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
-
-import androidx.fragment.app.FragmentActivity;
 
 /**
  * Activity to display network info and to start FTP service.

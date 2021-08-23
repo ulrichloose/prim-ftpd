@@ -1,10 +1,11 @@
 package org.primftpd.filepicker.nononsenseapps;
 
+import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.SortedList;
 import androidx.recyclerview.widget.RecyclerView;
-import android.view.ViewGroup;
+import androidx.recyclerview.widget.SortedList;
 
 /**
  * A simple adapter which also inserts a header item ".." to handle going up to the parent folder.

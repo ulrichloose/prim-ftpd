@@ -1,10 +1,10 @@
 package org.primftpd.prefs;
 
+import org.primftpd.R;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.primftpd.R;
 
 public enum Theme
 {

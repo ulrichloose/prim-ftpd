@@ -2,6 +2,8 @@ package org.primftpd.share;
 
 import android.net.Uri;
 
+import androidx.fragment.app.FragmentActivity;
+
 import org.primftpd.util.FilenameUnique;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,8 +14,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.List;
-
-import androidx.fragment.app.FragmentActivity;
 
 public abstract class AbstractReceiveShareActivity extends FragmentActivity {
 

@@ -1,13 +1,13 @@
 package org.primftpd.prefs;
 
+import android.content.Context;
+import android.preference.EditTextPreference;
+import android.util.AttributeSet;
+
 import org.primftpd.util.EncryptionUtil;
 import org.primftpd.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import android.content.Context;
-import android.preference.EditTextPreference;
-import android.util.AttributeSet;
 
 public class EncryptingEditTextPreference extends EditTextPreference
 {

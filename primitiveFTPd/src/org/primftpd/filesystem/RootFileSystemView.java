@@ -1,8 +1,8 @@
 package org.primftpd.filesystem;
 
-import org.primftpd.services.PftpdService;
 import org.primftpd.pojo.LsOutputBean;
 import org.primftpd.pojo.LsOutputParser;
+import org.primftpd.services.PftpdService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

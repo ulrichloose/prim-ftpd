@@ -3,6 +3,8 @@ package org.primftpd.util;
 import android.content.Context;
 import android.net.Uri;
 
+import androidx.documentfile.provider.DocumentFile;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,8 +12,6 @@ import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import androidx.documentfile.provider.DocumentFile;
 
 public class FilenameUnique {
 

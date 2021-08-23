@@ -1,11 +1,11 @@
 package org.primftpd.filesystem;
 
+import org.apache.ftpserver.ftplet.FileSystemView;
 import org.apache.ftpserver.ftplet.FtpException;
 import org.apache.ftpserver.ftplet.FtpFile;
-import org.apache.ftpserver.ftplet.FileSystemView;
 import org.apache.ftpserver.ftplet.User;
-import org.primftpd.services.PftpdService;
 import org.primftpd.pojo.LsOutputBean;
+import org.primftpd.services.PftpdService;
 
 import java.io.File;
 

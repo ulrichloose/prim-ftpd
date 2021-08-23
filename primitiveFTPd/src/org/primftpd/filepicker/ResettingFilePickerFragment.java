@@ -1,10 +1,11 @@
 package org.primftpd.filepicker;
 
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.Nullable;
 
 import org.primftpd.R;
 import org.primftpd.filepicker.nononsenseapps.FilePickerFragment;

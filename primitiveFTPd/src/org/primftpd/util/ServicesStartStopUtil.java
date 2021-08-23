@@ -11,17 +11,17 @@ import android.os.Build;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
-import org.primftpd.prefs.PrefsBean;
 import org.primftpd.PrimitiveFtpdActivity;
 import org.primftpd.R;
-import org.primftpd.share.QuickShareBean;
-import org.primftpd.ui.StartServerAndExitActivity;
 import org.primftpd.StartStopWidgetProvider;
 import org.primftpd.prefs.LoadPrefsUtil;
+import org.primftpd.prefs.PrefsBean;
 import org.primftpd.remotecontrol.PftpdPowerTogglesPlugin;
 import org.primftpd.remotecontrol.TaskerReceiver;
 import org.primftpd.services.FtpServerService;
 import org.primftpd.services.SshServerService;
+import org.primftpd.share.QuickShareBean;
+import org.primftpd.ui.StartServerAndExitActivity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

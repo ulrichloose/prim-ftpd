@@ -3,8 +3,9 @@ package org.primftpd.filepicker.nononsenseapps;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Basic ItemDecoration which loads a drawable as a divider.

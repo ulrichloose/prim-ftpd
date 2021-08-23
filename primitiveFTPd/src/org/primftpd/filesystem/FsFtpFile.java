@@ -1,10 +1,10 @@
 package org.primftpd.filesystem;
 
-import java.io.File;
-
 import org.apache.ftpserver.ftplet.FtpFile;
 import org.apache.ftpserver.ftplet.User;
 import org.primftpd.services.PftpdService;
+
+import java.io.File;
 
 public class FsFtpFile extends FsFile<FtpFile> implements FtpFile {
 	private final User user;

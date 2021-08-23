@@ -1,8 +1,8 @@
 package org.primftpd.filepicker;
 
 import android.os.Environment;
-import androidx.annotation.Nullable;
 
+import androidx.annotation.Nullable;
 
 import org.primftpd.filepicker.nononsenseapps.AbstractFilePickerFragment;
 import org.primftpd.filepicker.nononsenseapps.FilePickerActivity;
