@@ -14,5 +14,5 @@ dependencies {
     implementation 'org.slf4j:slf4j-api:1.7.32'
 
     testImplementation 'junit:junit:4.13.2'
-    testImplementation 'commons-codec:commons-codec:1.13'
+    testImplementation 'commons-codec:commons-codec:20041127.091804'
 }
