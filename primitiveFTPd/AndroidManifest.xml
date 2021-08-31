@@ -38,8 +38,8 @@
 
         <receiver android:name="org.primftpd.StartStopWidgetProvider">
             <intent-filter >
-                <action
-                    android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="org.primftpd.StartStopWidgetProvider.ACTION_CLICK"/>
             </intent-filter>
 
             <meta-data

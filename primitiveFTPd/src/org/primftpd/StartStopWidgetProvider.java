@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.RemoteViews;
+import android.media.AudioManager;
 
 import org.primftpd.services.DownloadsService;
 import org.primftpd.util.ServersRunningBean;
@@ -15,13 +16,15 @@ import org.primftpd.util.ServicesStartStopUtil;
 
 public class StartStopWidgetProvider extends AppWidgetProvider
 {
-	public static final String WIDGET_TOUCH_ACTION = "org.primftpd.APPWIDGET_TOUCH";
+	private static final String ACTION_CLICK = "ACTION_CLICK_WIDGET";
 
 	public static Intent buildServerStartStopIntent(Context context) {
 		Intent intent = new Intent(context, StartStopWidgetProvider.class);
-		intent.setAction(WIDGET_TOUCH_ACTION);
+		intent.setAction(ACTION_CLICK);
 		return intent;
 	}
+
+	private Context mContext;
 
 	@Override
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
@@ -55,14 +58,18 @@ public class StartStopWidgetProvider extends AppWidgetProvider
 		String action = intent != null ? intent.getAction() : null;
 		//logger().debug("onReceive(), action: {}", action);
 		Log.d(getClass().getName(), "onReceive(), action: " + action);
-
-		if (WIDGET_TOUCH_ACTION.equals(action)) {
+		
+		if (ACTION_CLICK.equals(action)) {
 			ServersRunningBean serversRunningBean = ServicesStartStopUtil.checkServicesRunning(context);
+
 			if (!serversRunningBean.atLeastOneRunning()) {
 				ServicesStartStopUtil.startServers(context);
 			} else {
 				ServicesStartStopUtil.stopServers(context);
 			}
+			mContext = context;
+			AudioManager am = (AudioManager)mContext.getSystemService(Context.AUDIO_SERVICE);
+			am.playSoundEffect(AudioManager.FX_KEY_CLICK, 0.5F);
 		} else if (DownloadsService.ACTION_STOP.equals(action)) {
 			context.stopService(new Intent(context, DownloadsService.class));
 		}
